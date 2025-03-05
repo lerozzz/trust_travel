@@ -1,0 +1,42 @@
+.images{
+    position: relative;
+    width: calc(100% - 540px);
+    height: auto;
+    align-self: flex-start;
+    top: -70px
+}
+
+.mainBannerImage{
+ z-index: 1;
+ margin-left: -56px;
+}
+
+.banner_image{
+ position: absolute;
+ top: 175px;
+ left: 200px;
+}
+
+.image_1{
+ position: absolute;
+ top: 200px;
+ left: 108px;
+}
+
+.image_2{
+ position: absolute;
+ top: 580px;
+ left: 128px;
+}
+
+.image_3{
+ position: absolute;
+ top: 220px;
+ left: 574px;
+}
+
+.image_4{
+ position: absolute;
+ top: 480px;
+ left: 574px;
+}

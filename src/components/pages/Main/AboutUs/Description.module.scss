@@ -1,0 +1,55 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+@use "@mixins/typography" as typography;
+
+.description_wrapper{
+    order: 2;
+    margin-left: 70px;
+    margin-bottom: 40px;
+}
+
+.overtitle {
+  @include typography.overtitle;
+  text-transform: uppercase;
+}
+
+.title {
+    @include typography.title;
+    font-size: 42px;
+    margin-top: 20px;
+  }
+  
+  .description {
+    @include typography.description;
+    margin-top: 20px;
+    font-size: 21px;
+  }
+
+  .outline_button{
+    background-color: colors.$background;
+    @include typography.description;
+    color: colors.$text-primary; 
+    border-color: colors.$primary;
+    border-radius: 10px;
+    width: 180px;
+    height: 48px;
+    margin-top: 40px;
+    font-family:manrope;
+  font-weight: 600;
+  }
+  .benefit_1 {
+    @include typography.description;
+    color: colors.$text-primary; 
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 60px;
+  }
+  .benefit_2 {
+    @include typography.description;
+    color: colors.$text-primary; 
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 60px;
+  }

@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import AppFrame from "@/components/AppFrame";
+import styles from "./body.module.scss";
+import { manrope, pt_serif } from "./fonts";
+import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body
+        className={`${manrope.className} ${pt_serif.variable} ${styles.container}`}
+      >
+        <AppFrame>{children}</AppFrame>
       </body>
     </html>
   );

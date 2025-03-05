@@ -1,0 +1,17 @@
+@use "@colors" as colors;
+@use "@mixins/common" as common;
+.header {
+    border-bottom: 1px solid colors.$border;
+    border-radius: 10px;
+    min-height: 148px;
+}
+
+.container {
+    @include common.container;
+    min-height: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}

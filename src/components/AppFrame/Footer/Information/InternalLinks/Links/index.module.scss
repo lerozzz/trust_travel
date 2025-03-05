@@ -1,0 +1,14 @@
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+    
+}
+
+.item {
+    font-weight: 500;
+    &:hover {
+        text-decoration: underline;
+    }
+}

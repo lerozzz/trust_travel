@@ -1,0 +1,26 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+@use "@mixins/typography" as typography;
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 88px;
+}
+
+.phone {
+    font-size: 20px;
+    font-weight: 500;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.application_button{
+background-color: colors.$primary;
+@include typography.description;
+color: colors.$background; 
+border-radius: 10px;
+width: 180px;
+height: 48px;
+}

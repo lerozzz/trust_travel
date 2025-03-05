@@ -1,0 +1,58 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+@use "@mixins/typography" as typography;
+
+.card_wrapper{
+    position: relative;
+}
+
+.country{
+    @include typography.description;
+    font-size: 20px;
+    color: colors.$background;
+}
+
+.city{
+    @include typography.title;
+    color: colors.$background;
+}
+
+.location_wrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+}
+
+.price_wrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+}
+
+.countPeople_wrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+}
+
+
+.card{
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.card_text_wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: absolute;
+    top:140px;
+    left: 30px;
+}
+
+.price_countPeople_wrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}

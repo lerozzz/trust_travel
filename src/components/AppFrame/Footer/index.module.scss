@@ -1,0 +1,40 @@
+@use "@colors" as colors;
+@use "@mixins/common" as common;
+@use "@mixins/typography" as typography;
+
+.footer {
+    min-height: 528px;
+    background-color: colors.$text-primary;
+    
+}
+
+.container {
+    @include common.container;
+    display: flex;
+    flex-direction: row;
+    color: colors.$background;
+    font-size: 20px;
+    flex-wrap: wrap;
+    padding-top: 80px;
+}
+
+.bottom_elements{
+    @include common.container; 
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap:30px;
+    
+}
+
+.line_division{
+    border: 1px solid colors.$text-secondary;
+}
+
+.copyright_text{
+    color: colors.$text-secondary;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+

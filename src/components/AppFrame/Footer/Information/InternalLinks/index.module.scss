@@ -1,0 +1,11 @@
+@use "@colors" as colors;
+@use "@mixins/common" as common;
+
+.links_container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    font-size: 20px;
+    color: colors.$background;
+    margin-top: 30px;
+}

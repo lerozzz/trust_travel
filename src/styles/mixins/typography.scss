@@ -1,0 +1,18 @@
+@use "@colors" as colors;
+
+@mixin title {
+  font-family: var(--font-pt);
+  font-size: 40px;
+}
+
+@mixin overtitle {
+  font-weight: 700;
+  color: colors.$primary;
+  font-size: 25px;
+}
+
+
+@mixin description {
+  color: colors.$text-secondary;
+  font-size: 21px;
+}
