@@ -1,5 +1,6 @@
 import { AboutUs } from "@/components/pages/Main/AboutUs";
 import { Banner } from "@/components/pages/Main/Banner";
+import { HotTours } from "@/components/pages/Main/HotTours";
 import { PopularDestination } from "@/components/pages/Main/PopularDestination";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner />
       <AboutUs />
       <PopularDestination />
+      <HotTours />
     </>
   );
 };
