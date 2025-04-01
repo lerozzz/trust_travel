@@ -1,7 +1,34 @@
-.tab_wrapper{
-    display: flex;
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+@use "@mixins/typography" as typography;
+
+
+.button{
+    background-color: colors.$background;
+    @include typography.description;
+    color: colors.$text-primary; 
+    border-radius: 10px;
+    border-color: colors.$background;
+    width: 180px;
+    height: 48px;
+    font-family:manrope;
+    font-weight: 600;
+    filter: drop-shadow(1px 1px 1px);
+}
+
+.button_wrapper{
+  display: flex;
   flex-direction: row;
-  margin-top: 40px;
+  margin-top: 10px;
+  column-gap: 40px;
+  justify-content: center;
+  align-items: center;
+  }
+
+.tabs_wrapper{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
   column-gap: 40px;
   justify-content: center;
   align-items: center;

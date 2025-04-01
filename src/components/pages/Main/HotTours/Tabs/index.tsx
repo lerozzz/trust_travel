@@ -1,5 +1,7 @@
-import { FC, useState } from "react";
 "use client";
+import { FC, useState } from "react";
+import { CitiesKeys, data } from "./data";
+import styles from "./index.module.scss";
 
 const Tabs = () => {
   const [city, setCity] = useState<CitiesKeys>('all');
@@ -11,10 +13,12 @@ const Tabs = () => {
 
   return (
     <div>
+      <div className={styles.button_wrapper}>
       {citiesKeys.map((cityKey, index) => (
         <Tab onClick={onChangeCity} key={index} data={{ cityKey, title: data[cityKey].title }} />
       ))}
-      <div>
+        </div>
+      <div className={styles.tabs_wrapper}>
         {data[city].list.map((el, index) => {
           return <div key={index}>{el.title}</div>;
         })}
@@ -29,6 +33,8 @@ const Tab: FC<{
 }> = ({ data, onClick }) => {
   const { cityKey, title } = data;
 
-  return <button onClick={() => onClick(cityKey)}>{title}</button>;
+  return <button className={styles.button} onClick={() => onClick(cityKey)}>{title}</button>
+   
+  
 };
 export default Tabs;

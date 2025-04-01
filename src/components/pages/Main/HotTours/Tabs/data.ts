@@ -1,4 +1,4 @@
-const data = {
+export const data = {
   all: {
     title: 'Все города',
     list: [{ title: 'Первая карточка' }, { title: 'Вторая карточка' }, { title: 'Третья карточка' }],
@@ -29,7 +29,7 @@ const data = {
   },
 };
 
-type CitiesKeys = keyof typeof data;
+export type CitiesKeys = keyof typeof data;
 
 
 
