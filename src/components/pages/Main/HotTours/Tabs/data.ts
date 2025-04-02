@@ -1,57 +1,50 @@
-export const data = {
+import {
+  aktauCards,
+  almatyCards,
+  astanaCards,
+  Card,
+  cardsList,
+  karagandaCards,
+  shymkentCards,
+} from "../Cards/CardInfo";
+
+export const data: Record<string, { title: string; list: Card[] }> = {
   all: {
-    title: 'Все города',
-    list: [{ title: 'Первая карточка' }, { title: 'Вторая карточка' }, { title: 'Третья карточка' }],
+    title: "Все города",
+    list: cardsList,
   },
   astana: {
-    title: 'Астана',
-    list: [
-      { title: 'Первая карточка Астана' },
-      { title: 'Вторая карточка Астана' },
-      { title: 'Третья карточка Астана' },
-    ],
+    title: "Астана",
+    list: astanaCards,
   },
   almaty: {
-    title: 'Алматы',
-    list: [
-      { title: 'Первая карточка Алматы' },
-      { title: 'Вторая карточка Алматы' },
-      { title: 'Третья карточка Алматы' },
-    ],
+    title: "Алматы",
+    list: almatyCards,
   },
   karaganda: {
-    title: 'Караганда',
-    list: [
-      { title: 'Первая карточка Караганда' },
-      { title: 'Вторая карточка Караганда' },
-      { title: 'Третья карточка Караганда' },
-    ],
+    title: "Караганда",
+    list: karagandaCards,
+  },
+  shymkent: {
+    title: "Шымкент",
+    list: shymkentCards,
+  },
+  aktay: {
+    title: "Актау",
+    list: aktauCards,
   },
 };
 
 export type CitiesKeys = keyof typeof data;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export const tabsData: TabsData = {
+//export const tabsData: TabsData = {
 //     'all': [{ image: 'photo1', geolocation: 'Turkey',hotelName:'Lera', starsCount: 1, date: { from: new Date('2011-10-10'), to: new Date('2011-10-11')}, personCount: 2, priceFrom: 100000}],
 //     'astana': [{ image: 'photo2', geolocation: 'Spain', hotelName: 'Lera', starsCount: 1, date: { from: new Date('2011-10-10'), to: new Date('2011-10-11') }, personCount: 2, priceFrom: 100000 }],
 //     'almata': [{ image: 'photo3', geolocation: 'Italy', hotelName: 'Lera', starsCount: 1, date: { from: new Date('2011-10-10'), to: new Date('2011-10-11') }, personCount: 2, priceFrom: 100000 }],
 //     'shymkent': [{ image: 'photo4', geolocation: 'Turkey', hotelName: 'Lera', starsCount: 1, date: { from: new Date('2011-10-10'), to: new Date('2011-10-11') }, personCount: 2, priceFrom: 100000 }],
 //     'actay': [{ image: 'photo5', geolocation: 'Turkey',hotelName:'Lera', starsCount: 1, date: { from: new Date('2011-10-10'), to: new Date('2011-10-11')}, personCount: 2, priceFrom: 100000}],
 //     'karaganda': [{ image: 'photo6', geolocation: 'Turkey',hotelName:'Lera', starsCount: 1, date: { from: new Date('2011-10-10'), to: new Date('2011-10-11')}, personCount: 2, priceFrom: 100000}],
-// } 
+// }
 
 // export type CitiesKey = 'all' | 'astana' | 'almata' | 'shymkent' | 'actay' | 'karaganda'
 // type CityCards = {

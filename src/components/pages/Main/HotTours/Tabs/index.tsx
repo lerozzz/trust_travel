@@ -1,12 +1,13 @@
 "use client";
 import { FC, useState } from "react";
+import Cards from "../Cards/index";
 import { CitiesKeys, data } from "./data";
 import styles from "./index.module.scss";
 
 const Tabs = () => {
-  const [city, setCity] = useState<CitiesKeys>('all');
+  const [city, setCity] = useState<CitiesKeys>("all");
   const citiesKeys = Object.keys(data) as CitiesKeys[];
-  
+
   const onChangeCity = (cityKey: CitiesKeys) => {
     setCity(cityKey);
   };
@@ -14,14 +15,16 @@ const Tabs = () => {
   return (
     <div>
       <div className={styles.button_wrapper}>
-      {citiesKeys.map((cityKey, index) => (
-        <Tab onClick={onChangeCity} key={index} data={{ cityKey, title: data[cityKey].title }} />
-      ))}
-        </div>
+        {citiesKeys.map((cityKey, index) => (
+          <Tab
+            onClick={onChangeCity}
+            key={index}
+            data={{ cityKey, title: data[cityKey].title }}
+          />
+        ))}
+      </div>
       <div className={styles.tabs_wrapper}>
-        {data[city].list.map((el, index) => {
-          return <div key={index}>{el.title}</div>;
-        })}
+        <Cards list={data[city].list} />
       </div>
     </div>
   );
@@ -33,8 +36,10 @@ const Tab: FC<{
 }> = ({ data, onClick }) => {
   const { cityKey, title } = data;
 
-  return <button className={styles.button} onClick={() => onClick(cityKey)}>{title}</button>
-   
-  
+  return (
+    <button className={styles.button} onClick={() => onClick(cityKey)}>
+      {title}
+    </button>
+  );
 };
 export default Tabs;

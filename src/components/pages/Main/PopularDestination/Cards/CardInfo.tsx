@@ -32,5 +32,5 @@ export type Card = {
   city: string;
   price: number;
   countPeople: number;
-  photo: string | StaticImageData
+  photo: string | StaticImageData;
 };

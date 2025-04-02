@@ -8,12 +8,8 @@ const Card: FC<CardProps> = (props) => {
   const { country, city, price, countPeople, photo } = props;
   return (
     <div className={styles.card_wrapper}>
-      <Image
-        className={styles.card}
-        alt="card_1"
-        src={photo}
-      />
-      
+      <Image className={styles.card} alt="card_1" src={photo} />
+
       <div className={styles.card_text_wrapper}>
         <div className={styles.location_wrapper}>
           <Image
