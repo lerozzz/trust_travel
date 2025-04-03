@@ -23,4 +23,8 @@ color: colors.$background;
 border-radius: 10px;
 width: 180px;
 height: 48px;
+font-family:manrope;
+font-weight: 600;
+box-shadow: 0px 6px 15px 10px rgba(0, 0, 0, 0.2); /* Тень */
+border-color: colors.$background;
 }

@@ -1,4 +1,6 @@
 import { default as all1 } from "@public/main/all1.png";
+import { default as all2 } from "@public/main/all2.png";
+import { default as all3 } from "@public/main/all3.png";
 import { StaticImageData } from "next/image";
 
 export type Card = {
@@ -17,26 +19,26 @@ export type Card = {
 export const cardsList: Card[] = [
   {
     image: all1,
-    geolocation: "Астана",
-    hotelName: "Гранд Отель",
+    geolocation: "Турция, Сиде, Чолаклы",
+    hotelName: "KAMELYA SELIN HOTEL",
     starsCount: 4,
     date: { from: new Date("2025-04-12"), to: new Date("2025-04-18") },
     personCount: 2,
     priceFrom: 20000,
   },
   {
-    image: "/images/card2.jpg",
-    geolocation: "Алматы",
-    hotelName: "Ритц",
+    image: all2,
+    geolocation: "Египет, Шарм-Эль-Шейх",
+    hotelName: "RIXOS PREMIUM SEAGATE",
     starsCount: 5,
     date: { from: new Date("2025-04-15"), to: new Date("2025-04-20") },
     personCount: 1,
     priceFrom: 25000,
   },
   {
-    image: "/images/card3.jpg",
-    geolocation: "Караганда",
-    hotelName: "Караганда Плаза",
+    image: all3,
+    geolocation: "Тайланд, о.Пхукет",
+    hotelName: "GRAND KATA VIP",
     starsCount: 3,
     date: { from: new Date("2025-04-18"), to: new Date("2025-04-22") },
     personCount: 3,

@@ -15,6 +15,7 @@ const Card: FC<CardType> = ({
 }) => {
   return (
     <div className={styles.card}>
+    
       {/* cn тут не нужен, но надо знать его в работе с scss */}
       <div className={cn(styles.image__wrapper)}>
         <Image
@@ -25,8 +26,8 @@ const Card: FC<CardType> = ({
           fill
         />
       </div>
-      <h3 className={styles.hotelName}>{hotelName}</h3>
       <p className={styles.geolocation}>{geolocation}</p>
+      <h3 className={styles.hotelName}>{hotelName}</h3>
       <div className={styles.stars}>
         {"★".repeat(starsCount) + "☆".repeat(5 - starsCount)}
       </div>
@@ -34,9 +35,10 @@ const Card: FC<CardType> = ({
         {date.from.toLocaleDateString()} — {date.to.toLocaleDateString()}
       </div>
       <div className={styles.personCount}>Гостей: {personCount}</div>
+      <hr className={styles.line_division} />
       <div className={styles.priceFrom}>
-        Цена от: {priceFrom.toLocaleString()} ₸
-      </div>
+        Цена от: <span className={styles.priceValue}>{priceFrom.toLocaleString()} ₸</span>
+        </div>
     </div>
   );
 };
