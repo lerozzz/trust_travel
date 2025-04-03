@@ -15,7 +15,6 @@ const Card: FC<CardType> = ({
 }) => {
   return (
     <div className={styles.card}>
-    
       {/* cn тут не нужен, но надо знать его в работе с scss */}
       <div className={cn(styles.image__wrapper)}>
         <Image
@@ -37,8 +36,11 @@ const Card: FC<CardType> = ({
       <div className={styles.personCount}>Гостей: {personCount}</div>
       <hr className={styles.line_division} />
       <div className={styles.priceFrom}>
-        Цена от: <span className={styles.priceValue}>{priceFrom.toLocaleString()} ₸</span>
-        </div>
+        Цена от:{" "}
+        <span className={styles.priceValue}>
+          {priceFrom.toLocaleString()} ₸
+        </span>
+      </div>
     </div>
   );
 };

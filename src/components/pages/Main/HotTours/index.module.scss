@@ -2,20 +2,3 @@
 @use "@fonts" as fonts;
 @use "@mixins/typography" as typography;
 
-.button{
-    background-color: colors.$background;
-    @include typography.description;
-    color: colors.$text-primary; 
-    border-color: colors.$primary;
-    border-radius: 10px;
-    width: 180px;
-    height: 48px;
-    font-family:manrope;
-    font-weight: 600;
-}
-.button_wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-}

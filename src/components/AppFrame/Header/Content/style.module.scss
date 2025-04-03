@@ -17,6 +17,7 @@
     }
 }
 .application_button{
+display: inline-block;
 background-color: colors.$primary;
 @include typography.description;
 color: colors.$background; 
@@ -25,6 +26,7 @@ width: 180px;
 height: 48px;
 font-family:manrope;
 font-weight: 600;
-box-shadow: 0px 6px 15px 10px rgba(0, 0, 0, 0.2); /* Тень */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+            0 1px 3px rgba(0, 0, 0, 0.08);
 border-color: colors.$background;
 }

@@ -20,6 +20,7 @@
 }
 
 .filled_button{
+display: inline-block;
 background-color: colors.$primary;
  @include typography.description;
 color: colors.$background; 
@@ -30,6 +31,9 @@ margin-top: 40px;
 margin-right: 40px;
 font-family:manrope;
 font-weight: 600;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+0 1px 3px rgba(0, 0, 0, 0.08);
+border-color: colors.$background;
 }
 
 .outline_button{
@@ -42,6 +46,8 @@ font-weight: 600;
   height: 48px;
   font-family:manrope;
   font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .text_and_button{ 
