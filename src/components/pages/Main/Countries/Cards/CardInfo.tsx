@@ -1,6 +1,6 @@
-import { default as image3 } from "@public/main/Egypt.png";
-import { default as image2 } from "@public/main/Thailand.png";
-import { default as image1 } from "@public/main/Turkey.png";
+import { default as image1 } from "@public/main/countries1.png";
+import { default as image2 } from "@public/main/countries2.png";
+import { default as image3 } from "@public/main/countries3.png";
 import { StaticImageData } from "next/image";
 
 export const cards: Card[] = [
@@ -11,8 +11,5 @@ export const cards: Card[] = [
 
 export type Card = {
   country: string;
-  city: string;
-  price: number;
-  countPeople: number;
   photo: string | StaticImageData;
 };

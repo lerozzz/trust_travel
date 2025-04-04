@@ -47,4 +47,4 @@ const Card: FC<CardType> = ({
 
 export default Card;
 
-export type CardProps = CardType;
+

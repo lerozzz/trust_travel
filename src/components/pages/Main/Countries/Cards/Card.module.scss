@@ -20,7 +20,7 @@
 
 .country{
     @include typography.description;
-    font-size: 20px;
+    font-size: 40px;
     color: colors.$background;
     margin-top: 5px;
 }
