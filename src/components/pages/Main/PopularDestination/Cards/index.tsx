@@ -1,11 +1,11 @@
-import { cards } from "./CardInfo";
+import { cardsList } from "./CardInfo";
 import Card from "./Card";
 import styles from "./index.module.scss";
 
 const Cards = () => {
   return (
     <div className={styles.card_wrapper}>
-      {cards.map((el, index) => {
+      {cardsList.map((el, index) => {
         return <Card key={index} {...el} />;
       })}
     </div>

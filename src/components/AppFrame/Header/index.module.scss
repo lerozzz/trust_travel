@@ -1,9 +1,14 @@
 @use "@colors" as colors;
 @use "@mixins/common" as common;
+
 .header {
     border-bottom: 1px solid colors.$border;
     border-radius: 10px;
     min-height: 148px;
+    position: fixed;
+    min-width: 100vw;
+    background-color: colors.$background;
+    z-index: 1;
 }
 
 .container {

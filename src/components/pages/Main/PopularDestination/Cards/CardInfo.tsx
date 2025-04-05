@@ -3,34 +3,34 @@ import { default as image2 } from "@public/main/Thailand.png";
 import { default as image1 } from "@public/main/Turkey.png";
 import { StaticImageData } from "next/image";
 
-export const cards: Card[] = [
+export const cardsList: Card[] = [
   {
     city: "Анкара",
-    countPeople: 2,
+    personCount: 2,
     country: "Турция",
-    photo: image1,
-    price: 500,
+    image: image1,
+    priceFrom: 500,
   },
   {
     city: "Пхукет",
-    countPeople: 3,
+    personCount: 3,
     country: "Тайланд",
-    photo: image2,
-    price: 400,
+    image: image2,
+    priceFrom: 400,
   },
   {
     city: "Шарм-эль-шейх",
-    countPeople: 2,
+    personCount: 2,
     country: "Египет",
-    photo: image3,
-    price: 400,
+    image: image3,
+    priceFrom: 400,
   },
 ];
 
 export type Card = {
   country: string;
   city: string;
-  price: number;
-  countPeople: number;
-  photo: string | StaticImageData;
+  priceFrom: number;
+  personCount: number;
+  image: string | StaticImageData;
 };

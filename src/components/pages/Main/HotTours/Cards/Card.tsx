@@ -46,5 +46,3 @@ const Card: FC<CardType> = ({
 };
 
 export default Card;
-
-
