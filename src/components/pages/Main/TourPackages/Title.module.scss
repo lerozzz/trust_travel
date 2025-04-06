@@ -1,0 +1,25 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+@use "@mixins/typography" as typography;
+
+.description{
+    @include typography.title;
+    font-size: 42px;
+    margin-top: 40px;
+    max-width: 1002px;
+    font-weight: bold;
+}
+
+.title {
+    @include typography.description;
+    font-size: 32px;
+    color: colors.$background; 
+    font-weight: 500;
+  }
+
+.title_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

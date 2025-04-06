@@ -1,0 +1,99 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+@use "@mixins/typography" as typography;
+
+.card{
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Тень */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 40px 28px;
+  position: relative;
+}
+.decoration{
+background-color: colors.$primary;
+width: 54px;
+height: 134px;
+position: absolute;
+right: 0;
+top:0;
+border-radius: 0px 10px 0px 10px;
+}
+
+.image {
+     border-radius: 50%;
+&__wrapper {
+    position: relative;
+    min-height: 140px;
+    min-width: 140px;
+&::before {
+    z-index: 1;
+    content: "''";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    pointer-events: none; /* Чтобы градиент не мешал кликам по изображению */
+    border-radius: 50%;
+  }
+}
+}
+
+.geolocation{
+  @include typography.description;
+  font-size: 20px;
+  color: colors.$text-secondary;
+  margin-top: 10px;
+  
+}
+.description{
+  @include typography.description;
+  font-size: 20px;
+  color: colors.$text-secondary;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.name{
+  @include typography.title;
+    color: colors.$text-primary;
+    font-size: 27px;
+    margin-top: 10px;
+}
+
+.rating{
+  &_wrapper {
+    display: flex;  
+    flex-direction: column;
+    min-width: 100%;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px; // отступ между текстом и звёздами
+    margin-top: 16px;
+  }
+  &_description {
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+    min-width: 100%;
+  }
+}
+
+.line_division{
+  border: 1px solid colors.$text-secondary;
+  width: 100%;
+  }
+
+.review{
+    @include typography.description;
+  font-size: 20px;
+  color: colors.$text-secondary;
+}
+.stars{
+  color: #FFB904;
+  font-size: 27px;
+}
+
+

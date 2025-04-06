@@ -10,50 +10,36 @@ import styles from "./Image.module.scss";
 const BannerImage = () => {
   return (
     <div className={styles.images}>
-      <Image
-        className={styles.mainBannerImage}
-        alt="mainBannerImage"
-        width={975}
-        height={623}
-        src={mainBannerImage}
-      />
+      <div className={styles.mainBannerWrapper}>
+        <Image
+          className={styles.mainBannerImage}
+          alt="mainBannerImage"
+          src={mainBannerImage}
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+      </div>
 
-      <Image
-        className={styles.banner_image}
-        alt="banner_image"
-        width={448}
-        height={552}
-        src={banner_image}
-      />
-      <Image
-        className={styles.image_1}
-        alt="image_1"
-        width={194}
-        height={261}
-        src={image_1}
-      />
-      <Image
-        className={styles.image_2}
-        alt="image_2"
-        width={160}
-        height={186}
-        src={image_2}
-      />
-      <Image
-        className={styles.image_3}
-        alt="image_3"
-        width={142}
-        height={184}
-        src={image_3}
-      />
-      <Image
-        className={styles.image_4}
-        alt="image_4"
-        width={177}
-        height={210}
-        src={image_4}
-      />
+      <div className={styles.overlayImages}>
+        <div className={styles.imageWrapper}>
+          <Image src={image_1} alt="image_1" fill sizes="(max-width: 768px) 25vw, 150px" style={{ objectFit: "contain" }} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <Image src={banner_image} alt="banner_image" fill sizes="(max-width: 768px) 30vw, 220px" style={{ objectFit: "contain" }} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <Image src={image_2} alt="image_2" fill sizes="(max-width: 768px) 20vw, 120px" style={{ objectFit: "contain" }} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <Image src={image_3} alt="image_3" fill sizes="(max-width: 768px) 20vw, 110px" style={{ objectFit: "contain" }} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <Image src={image_4} alt="image_4" fill sizes="(max-width: 768px) 25vw, 140px" style={{ objectFit: "contain" }} />
+        </div>
+      </div>
     </div>
   );
 };
+
 export default BannerImage;

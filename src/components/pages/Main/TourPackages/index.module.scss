@@ -1,0 +1,53 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+@use "@mixins/typography" as typography;
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 686px;
+    overflow: hidden;
+    margin-top: 140px;
+}
+
+.button{
+    background-color: Transparent;
+    @include typography.description;
+    color: colors.$background; 
+    border-color: colors.$primary;
+    border-radius: 10px;
+    width: 180px;
+    height: 48px;
+    font-family:manrope;
+    font-weight: 600;
+}
+
+.button_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.image{
+   z-index: 1;
+    object-fit: fill;
+    width: 100%;
+    filter: brightness(50%);
+}
+
+.content{
+position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: colors.$background; 
+  text-align: center;
+  padding: 20px;
+}
