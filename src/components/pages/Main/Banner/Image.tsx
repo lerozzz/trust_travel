@@ -7,37 +7,44 @@ import image_4 from "@public/main/image_4.png";
 import Image from "next/image";
 import styles from "./Image.module.scss";
 
+const backgoundImages = [
+  { src: image_1, className: styles.image_1 },
+  { src: image_2, className: styles.image_2 },
+  { src: image_3, className: styles.image_3 },
+  { src: image_4, className: styles.image_4 },
+];
+
 const BannerImage = () => {
   return (
     <div className={styles.images}>
-      <div className={styles.mainBannerWrapper}>
-        <Image
-          className={styles.mainBannerImage}
-          alt="mainBannerImage"
-          src={mainBannerImage}
-          fill
-          sizes="100vw"
-          style={{ objectFit: "cover" }}
-        />
+      <div className={styles.mainBannerImage}>
+        <Image alt="mainBannerImage" src={mainBannerImage} fill />
       </div>
 
-      <div className={styles.overlayImages}>
-        <div className={styles.imageWrapper}>
-          <Image src={image_1} alt="image_1" fill sizes="(max-width: 768px) 25vw, 150px" style={{ objectFit: "contain" }} />
-        </div>
-        <div className={styles.imageWrapper}>
-          <Image src={banner_image} alt="banner_image" fill sizes="(max-width: 768px) 30vw, 220px" style={{ objectFit: "contain" }} />
-        </div>
-        <div className={styles.imageWrapper}>
-          <Image src={image_2} alt="image_2" fill sizes="(max-width: 768px) 20vw, 120px" style={{ objectFit: "contain" }} />
-        </div>
-        <div className={styles.imageWrapper}>
-          <Image src={image_3} alt="image_3" fill sizes="(max-width: 768px) 20vw, 110px" style={{ objectFit: "contain" }} />
-        </div>
-        <div className={styles.imageWrapper}>
-          <Image src={image_4} alt="image_4" fill sizes="(max-width: 768px) 25vw, 140px" style={{ objectFit: "contain" }} />
-        </div>
+      <div className={styles.banner_image}>
+        <Image alt="banner_image" src={banner_image} fill />
       </div>
+
+      {backgoundImages.map(({ className, src }, index) => (
+        <div className={className} key={index}>
+          <Image src={src} alt={`image_${index}`} fill />
+        </div>
+      ))}
+      {/* <div className={styles.image_1}>
+        <Image alt="image_1" src={image_1} fill />
+      </div>
+
+      <div className={styles.image_2}>
+        <Image alt="image_2" src={image_2} fill />
+      </div>
+
+      <div className={styles.image_3}>
+        <Image alt="image_3" src={image_3} fill />
+      </div>
+
+      <div className={styles.image_4}>
+        <Image alt="image_4" src={image_4} fill />
+      </div> */}
     </div>
   );
 };
