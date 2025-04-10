@@ -9,8 +9,9 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
-  padding: 40px 28px;
+  padding: 28px;
   position: relative;
+  
 }
 .decoration{
 background-color: colors.$primary;
@@ -71,7 +72,7 @@ border-radius: 0px 10px 0px 10px;
     justify-content: flex-end;
     align-items: center;
     gap: 8px; // отступ между текстом и звёздами
-    margin-top: 16px;
+    margin-top: 28px;
   }
   &_description {
     display: flex;
@@ -84,6 +85,7 @@ border-radius: 0px 10px 0px 10px;
 .line_division{
   border: 1px solid colors.$text-secondary;
   width: 100%;
+  margin-bottom: 10px;
   }
 
 .review{
