@@ -8,7 +8,7 @@ const Card: FC<CardType> = ({
   geolocation,
   name,
   starsCount,
- description,
+  description,
 }) => {
   return (
     <div className={styles.card}>
@@ -28,9 +28,9 @@ const Card: FC<CardType> = ({
       <div className={styles.rating_wrapper}>
         <hr className={styles.line_division} />
         <div className={styles.rating_description}>
-      <span className={styles.review}>Оценка: </span>
-      <div className={styles.stars}>
-       {"★".repeat(starsCount) + "☆".repeat(5 - starsCount)}
+          <span className={styles.review}>Оценка: </span>
+          <div className={styles.stars}>
+            {"★".repeat(starsCount) + "☆".repeat(5 - starsCount)}
           </div>
         </div>
       </div>

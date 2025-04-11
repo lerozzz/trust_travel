@@ -11,17 +11,17 @@
 .overtitle {
   @include typography.overtitle;
   text-transform: uppercase;
+  margin-bottom: 20px
 }
 
 .title {
     @include typography.title;
     font-size: 42px;
-    margin-top: 20px;
+    margin-bottom: 20px
   }
   
   .description {
     @include typography.description;
-    margin-top: 20px;
     font-size: 21px;
   }
 
@@ -39,19 +39,25 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
   0 1px 3px rgba(0, 0, 0, 0.08);
   }
+
   .benefit_1 {
     @include typography.description;
     color: colors.$text-primary; 
-    margin-top: 40px;
     font-size: 24px;
     font-weight: 600;
-    margin-left: 60px;
   }
+
   .benefit_2 {
     @include typography.description;
     color: colors.$text-primary; 
-    margin-top: 30px;
     font-size: 24px;
     font-weight: 600;
-    margin-left: 60px;
+  }
+
+  .benefit_wrapper{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
   }
