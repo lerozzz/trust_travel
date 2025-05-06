@@ -12,7 +12,6 @@
 
 .button{
     background-color: Transparent;
-    @include typography.description;
     color: colors.$background; 
     border-color: colors.$primary;
     border-radius: 10px;

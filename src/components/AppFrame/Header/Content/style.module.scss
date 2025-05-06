@@ -16,11 +16,11 @@
         text-decoration: underline;
     }
 }
+
 .application_button{
 display: inline-block;
 background-color: colors.$primary;
-@include typography.description;
-color: colors.$background; 
+font-style: colors.$background; 
 border-radius: 10px;
 width: 180px;
 height: 48px;

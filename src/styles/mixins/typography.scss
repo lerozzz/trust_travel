@@ -1,18 +1,33 @@
 @use "@colors" as colors;
+@use "@breakpoints" as breakpoints;
 
-@mixin title {
-  font-family: var(--font-pt);
-  font-size: 40px;
+
+@mixin mobile {
+  @media screen and (max-width: calc(breakpoints.$sm - 1px)) {
+    @content;
+  }
 }
 
-@mixin overtitle {
-  font-weight: 700;
-  color: colors.$primary;
-  font-size: 25px;
+@mixin tablet {
+  @media screen and (max-width: calc(breakpoints.$md - 1px)) {
+    @content;
+  }
 }
 
+@mixin laptop {
+  @media screen and (max-width: calc(breakpoints.$lg - 1px)) {
+    @content;
+  }
+}
 
-@mixin description {
-  color: colors.$text-secondary;
-  font-size: 21px;
+@mixin min-width($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
 }

@@ -1,3 +1,4 @@
+import { Typography, TypographyType } from "@/components/common/Typography";
 import { default as tourPackages } from "@public/main/tour_packages.png";
 import Image from "next/image";
 import Title from "./Title";
@@ -14,8 +15,15 @@ export const TourPackages = () => {
                 className={styles.image} />
             <div className={styles.content}>
           <Title />
-        <div className={styles.button_wrapper}>
-            <button className={styles.button}>Узнать больше</button>
+          <div className={styles.button_wrapper}>
+
+          <Typography
+          type={TypographyType.DESCRIPTION}
+          as="button"
+          className={styles.button}
+        >
+              Узнать больше
+              </Typography>
         </div>
             </div>
      </div>

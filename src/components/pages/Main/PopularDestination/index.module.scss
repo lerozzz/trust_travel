@@ -4,7 +4,6 @@
 
 .button{
     background-color: colors.$background;
-    @include typography.description;
     color: colors.$text-primary; 
     border-color: colors.$primary;
     border-radius: 10px;

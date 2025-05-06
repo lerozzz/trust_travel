@@ -1,3 +1,4 @@
+import { Typography, TypographyType } from "@/components/common/Typography";
 import location from "@public/main/location.svg";
 import Image from "next/image";
 import { FC } from "react";
@@ -29,15 +30,37 @@ const Card: FC<CardType> = ({
         height={30}
         src={location}
       />
-      <p className={styles.country}>{country}</p>
-      <h3 className={styles.city}>{city}</h3>
-      <div className={styles.priceFrom}>
+       <Typography
+        type={TypographyType.DESCRIPTION}
+        as="p"
+        className={styles.country}
+      >
+        {country}
+      </Typography>
+      <Typography
+        type={TypographyType.TITLE}
+        as="h3"
+        className={styles.city}
+      >
+        {city}
+      </Typography>
+      <Typography
+        type={TypographyType.DESCRIPTION}
+        as="div"
+        className={styles.priceFrom}
+      >
         Цена от:{" "}
         <span className={styles.priceValue}>
           {priceFrom.toLocaleString()} ₸
         </span>
-      </div>
-      <div className={styles.personCount}>Гостей: {personCount}</div>
+      </Typography>
+      <Typography
+        type={TypographyType.DESCRIPTION}
+        as="div"
+        className={styles.personCount}
+      >
+        Гостей: {personCount}
+        </Typography>
     </div>
   );
 };

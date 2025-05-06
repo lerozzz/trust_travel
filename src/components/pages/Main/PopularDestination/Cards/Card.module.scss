@@ -29,7 +29,6 @@ position: relative;
  }
 }
 .country{
-    @include typography.description;
     font-size: 20px;
     color: colors.$background;
     margin-top: 5px;
@@ -41,7 +40,6 @@ position: relative;
 }
 
 .city{
-    @include typography.title;
     color: colors.$background;
     position: absolute;
     top: 170px;
@@ -61,13 +59,11 @@ position: relative;
     top: 234px;
     left: 30px;
     z-index: 2;
-    @include typography.description;
     font-size: 20px;
     color: colors.$background;
 }
 
 .personCount{
-    @include typography.description;
     font-size: 20px;
     color: colors.$background;
     position: absolute;

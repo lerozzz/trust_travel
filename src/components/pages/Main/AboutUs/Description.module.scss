@@ -9,25 +9,21 @@
 }
 
 .overtitle {
-  @include typography.overtitle;
   text-transform: uppercase;
   margin-bottom: 20px
 }
 
 .title {
-    @include typography.title;
     font-size: 42px;
     margin-bottom: 20px
   }
   
   .description {
-    @include typography.description;
     font-size: 21px;
   }
 
   .outline_button{
     background-color: colors.$background;
-    @include typography.description;
     color: colors.$text-primary; 
     border-color: colors.$primary;
     border-radius: 10px;
@@ -41,14 +37,12 @@
   }
 
   .benefit_1 {
-    @include typography.description;
     color: colors.$text-primary; 
     font-size: 24px;
     font-weight: 600;
   }
 
   .benefit_2 {
-    @include typography.description;
     color: colors.$text-primary; 
     font-size: 24px;
     font-weight: 600;

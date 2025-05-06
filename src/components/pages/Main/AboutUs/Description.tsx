@@ -1,18 +1,35 @@
+import { Typography, TypographyType } from "@/components/common/Typography";
 import benefit_1 from "@public/main/benefit_1.svg";
 import benefit_2 from "@public/main/benefit_2.svg";
 import Image from "next/image";
 import styles from "./Description.module.scss";
+
 const Decription = () => {
   return (
     <div className={styles.description_wrapper}>
-      <p className={styles.overtitle}>О нас</p>
-      <h1 className={styles.title}>Ваши ворота в приключения</h1>
-      <p className={styles.description}>
+       <Typography
+        type={TypographyType.OVERTITLE}
+        as="p"
+       className={styles.overtitle}
+      > 
+        О нас
+      </Typography>
+      <Typography
+        type={TypographyType.TITLE}
+        as="h1"
+       className={styles.title}
+      > 
+        Ваши ворота в приключения
+        </Typography>
+        <Typography
+        type={TypographyType.DESCRIPTION}
+        as="p"
+       className={styles.description}
+      > 
         Trust Travel приглашает вас открыть для себя красоту и разнообразие
         путешествий. Находясь в Казахстане, мы специализируемся на разработке
         индивидуальных маршрутов, отвечающих вашим уникальным вкусам и
-        интересам.{" "}
-      </p>
+      </Typography>
       <div className={styles.benefit_wrapper}>
         <Image
           className={styles.benefit_1}
@@ -21,7 +38,13 @@ const Decription = () => {
           height={40}
           src={benefit_1}
         />
-        <p className={styles.benefit_1}>Прекрасный опыт</p>
+         <Typography
+        type={TypographyType.DESCRIPTION}
+        as="p"
+       className={styles.benefit_1}
+      > 
+          Прекрасный опыт
+          </Typography>
       </div>
       <div className={styles.benefit_wrapper}>
         <Image
@@ -31,9 +54,21 @@ const Decription = () => {
           height={40}
           src={benefit_2}
         />
-        <p className={styles.benefit_2}>Самые дешевые предложения</p>
+         <Typography
+        type={TypographyType.DESCRIPTION}
+        as="p"
+       className={styles.benefit_2}
+      > 
+          Самые дешевые предложения
+          </Typography>
       </div>
-      <button className={styles.outline_button}>Читать далее</button>
+      <button className={styles.outline_button}>
+      <Typography
+        type={TypographyType.DESCRIPTION}
+      > 
+        Читать далее
+        </Typography>
+      </button>
     </div>
   );
 };

@@ -1,7 +1,8 @@
+import { Typography, TypographyType } from "@/components/common/Typography";
 import { Container } from "@common/Container";
+import Cards from "./Cards";
 import Title from "./Title";
 import styles from "./index.module.scss";
-import Cards from "./Cards";
 
 export const Countries = () => {
   return (
@@ -9,7 +10,13 @@ export const Countries = () => {
       <Title />
       <Cards />
       <div className={styles.button_wrapper}>
-        <button className={styles.button}>Узнать больше</button>
+      <Typography
+          type={TypographyType.DESCRIPTION}
+          as="button"
+          className={styles.button}
+        >
+          Узнать больше
+          </Typography>
       </div>
     </Container>
   );

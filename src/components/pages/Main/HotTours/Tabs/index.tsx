@@ -1,8 +1,10 @@
 "use client";
+import { Typography, TypographyType } from "@/components/common/Typography";
 import { FC, useState } from "react";
 import Cards from "../Cards/index";
 import { CitiesKeys, data } from "./data";
 import styles from "./index.module.scss";
+
 
 const Tabs = () => {
   const [city, setCity] = useState<CitiesKeys>("all");
@@ -37,9 +39,15 @@ const Tab: FC<{
   const { cityKey, title } = data;
 
   return (
+    
     <button className={styles.button} onClick={() => onClick(cityKey)}>
-      {title}
-    </button>
+      <Typography
+    type={TypographyType.DESCRIPTION}
+  >
+        {title}
+        </Typography>
+      </button>
+      
   );
 };
 export default Tabs;

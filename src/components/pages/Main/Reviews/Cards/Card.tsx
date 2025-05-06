@@ -1,3 +1,4 @@
+import { Typography, TypographyType } from "@/components/common/Typography";
 import Image from "next/image";
 import { FC } from "react";
 import type { Card as CardType } from "../Cards/CardInfo";
@@ -22,13 +23,43 @@ const Card: FC<CardType> = ({
           fill
         />
       </div>
-      <h3 className={styles.name}>{name}</h3>
-      <p className={styles.geolocation}>{geolocation}</p>
-      <div className={styles.description}>{description}</div>
+
+      <Typography
+        type={TypographyType.TITLE}
+        as="h3"
+        className={styles.name}
+      >
+        {name}
+      </Typography>
+      
+      <Typography
+        type={TypographyType.DESCRIPTION}
+        as="p"
+        className={styles.geolocation}
+      >
+       {geolocation}
+      </Typography>
+
+      <Typography
+        type={TypographyType.DESCRIPTION}
+        as="p"
+        className={styles.description}
+      >
+       {description}
+      </Typography>
+      
       <div className={styles.rating_wrapper}>
         <hr className={styles.line_division} />
         <div className={styles.rating_description}>
-          <span className={styles.review}>Оценка: </span>
+
+        <Typography
+        type={TypographyType.DESCRIPTION}
+        as="span"
+        className={styles.review}
+      >
+            Оценка: 
+          </Typography>
+          
           <div className={styles.stars}>
             {"★".repeat(starsCount) + "☆".repeat(5 - starsCount)}
           </div>

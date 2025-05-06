@@ -1,0 +1,74 @@
+@use "@mixins/typography" as typography;
+@use "@colors" as colors;
+@use "@breakpoints" as breakpoints;
+
+.title{
+    font-family: var(--font-pt);
+    font-size: 40px;
+    @include typography.laptop{
+      font-size: 35px;
+    }
+    @include typography.tablet{
+      font-size: 30px;
+    }
+    @include typography.mobile{
+      font-size:20px;
+    }
+}
+
+.overtitle{
+    font-weight: 700;
+    color: colors.$primary;
+    font-size: 25px;
+    @include typography.laptop{
+      font-size: 20px;
+    }
+    @include typography.tablet{
+        font-size: 18px;
+      }
+      @include typography.mobile{
+        font-size: 15px;
+      }
+}
+
+.description{
+    color: colors.$text-secondary;
+    font-size: 21px;
+    @include typography.laptop{
+      font-size:18px;
+    }
+    @include typography.tablet{
+        font-size: 17px;
+      }
+      @include typography.mobile{
+        font-size:10px;
+      }
+}
+
+.header{
+  color: colors.$text-secondary;
+  font-size: 21px;
+  @include typography.laptop{
+    font-size:18px;
+  }
+  @include typography.tablet{
+      font-size: 17px;
+    }
+    @include typography.mobile{
+      font-size:10px;
+    }
+}
+
+.footer{
+  color: colors.$text-secondary;
+  font-size: 21px;
+  @include typography.laptop{
+    font-size:18px;
+  }
+  @include typography.tablet{
+      font-size: 17px;
+    }
+    @include typography.mobile{
+      font-size:10px;
+    }
+}

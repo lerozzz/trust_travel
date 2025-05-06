@@ -1,8 +1,10 @@
+import { Typography, TypographyType } from "@/components/common/Typography";
 import cn from "classnames";
 import Image from "next/image";
 import { FC } from "react";
 import type { Card as CardType } from "../Cards/CardInfo";
 import styles from "./Card.module.scss";
+
 
 const Card: FC<CardType> = ({
   image,
@@ -25,22 +27,54 @@ const Card: FC<CardType> = ({
           fill
         />
       </div>
-      <p className={styles.geolocation}>{geolocation}</p>
-      <h3 className={styles.hotelName}>{hotelName}</h3>
+      <Typography
+        type={TypographyType.DESCRIPTION}
+        as="p"
+        className={styles.geolocation}
+      >
+        {geolocation}
+      </Typography>
+
+      <Typography
+        type={TypographyType.TITLE}
+        as="h3"
+        className={styles.hotelName}
+      >
+        {hotelName}
+      </Typography>
+      
       <div className={styles.stars}>
         {"★".repeat(starsCount) + "☆".repeat(5 - starsCount)}
       </div>
-      <div className={styles.date}>
+
+      <Typography
+        type={TypographyType.DESCRIPTION}
+        as="div"
+        className={styles.date}
+      >
         {date.from.toLocaleDateString()} — {date.to.toLocaleDateString()}
-      </div>
-      <div className={styles.personCount}>Гостей: {personCount}</div>
+      </Typography>
+      
+      <Typography
+        type={TypographyType.DESCRIPTION}
+        as="div"
+        className={styles.personCount}
+      >
+        Гостей: {personCount}
+      </Typography>
+      
       <hr className={styles.line_division} />
-      <div className={styles.priceFrom}>
+
+      <Typography
+        type={TypographyType.DESCRIPTION}
+        as="div"
+        className={styles.priceFrom}
+      >
         Цена от:{" "}
         <span className={styles.priceValue}>
           {priceFrom.toLocaleString()} ₸
         </span>
-      </div>
+        </Typography>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { Typography, TypographyType } from "@/components/common/Typography";
 import Image from "next/image";
 import { FC } from "react";
 import styles from "./Card.module.scss";
@@ -13,7 +14,13 @@ const Card: FC<CardType> = ({ country, photo }) => {
           objectFit="cover"
           className={styles.image}
         />
-        <p className={styles.country}>{country}</p>
+        <Typography
+        type={TypographyType.TITLE}
+        as="h1"
+        className={styles.country}
+      >
+          {country}
+          </Typography>
       </div>
     </div>
   );

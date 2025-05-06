@@ -3,7 +3,6 @@
 @use "@mixins/typography" as typography;
 
 .description{
-    @include typography.title;
     font-size: 42px;
     margin-top: 40px;
     max-width: 1002px;
@@ -11,7 +10,6 @@
 }
 
 .title {
-    @include typography.description;
     font-size: 32px;
     color: colors.$background; 
     font-weight: 500;
