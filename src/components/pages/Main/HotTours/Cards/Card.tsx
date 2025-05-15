@@ -28,7 +28,7 @@ const Card: FC<CardType> = ({
         />
       </div>
       <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="p"
         className={styles.geolocation}
       >
@@ -48,7 +48,7 @@ const Card: FC<CardType> = ({
       </div>
 
       <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="div"
         className={styles.date}
       >
@@ -56,7 +56,7 @@ const Card: FC<CardType> = ({
       </Typography>
       
       <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="div"
         className={styles.personCount}
       >
@@ -66,7 +66,7 @@ const Card: FC<CardType> = ({
       <hr className={styles.line_division} />
 
       <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="div"
         className={styles.priceFrom}
       >

@@ -3,72 +3,81 @@
 @use "@mixins/typography" as typography;
 
 .card{
-position: relative;
-   overflow: hidden;
-   width: 100%;
-   border-radius: 10px; 
+    display: flex;
+   position: relative;
+   min-height: 268px;
+   align-items: flex-end;
   }
   
-.image {
-    object-fit: cover;
-}
-.image__wrapper {
+.image  {
     border-radius: 10px;
-   position: relative;
-   overflow: hidden;
-   width: 100%;
-   height: 300px;
+&__wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
 &::before {
+    border-radius: 10px;
    z-index: 1;
-   content: "''";
+   content: " ";
    position: absolute;
    width: 100%;
    height: 100%;
-   pointer-events: none; /* Чтобы градиент не мешал кликам по изображению */
+   pointer-events: none; 
    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
  }
 }
-.country{
-    font-size: 20px;
-    color: colors.$background;
-    margin-top: 5px;
-    position: absolute;
-    top: 134px;
-    left: 66px;
+}
+
+.layout{
     z-index: 2;
-    text-align: center;
+    margin: 0 0 40px 40px;
+    display: flex;
+    flex-direction: column;
+   align-items: flex-start;
+   row-gap: 10px;
+}
+
+.countryWrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: flex-start;
+  align-items: center;
+}
+
+
+.country{
+    color: colors.$background;
 }
 
 .city{
     color: colors.$background;
-    position: absolute;
-    top: 170px;
-    left: 30px;
-    z-index: 2;
+    font-size: 32px;
+    @include typography.laptop{
+      font-size: 30px;
+    }
+    @include typography.tablet{
+      font-size: 20px;
+    }
+    @include typography.mobile{
+      font-size: 18px;
+    }
 }
 
-.location{
-    position: absolute;
-    top: 138px;
-    left: 30px;
-    z-index: 2;
-}
 
 .priceFrom{
-    position: absolute;
-    top: 234px;
-    left: 30px;
-    z-index: 2;
-    font-size: 20px;
     color: colors.$background;
 }
 
 .personCount{
-    font-size: 20px;
     color: colors.$background;
-    position: absolute;
-    top: 234px;
-    left: 260px;
-    z-index: 2;
 }
 
+.priceCountWrapper{
+     display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}

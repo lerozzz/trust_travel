@@ -1,5 +1,6 @@
 "use client";
 import { Typography, TypographyType } from "@/components/common/Typography";
+import classNames from "classnames";
 import { FC, useState } from "react";
 import Cards from "../Cards/index";
 import { CitiesKeys, data } from "./data";
@@ -7,7 +8,7 @@ import styles from "./index.module.scss";
 
 
 const Tabs = () => {
-  const [city, setCity] = useState<CitiesKeys>("all");
+  const [currentCityKey, setCity] = useState<CitiesKeys>("all");
   const citiesKeys = Object.keys(data) as CitiesKeys[];
 
   const onChangeCity = (cityKey: CitiesKeys) => {
@@ -19,6 +20,7 @@ const Tabs = () => {
       <div className={styles.button_wrapper}>
         {citiesKeys.map((cityKey, index) => (
           <Tab
+            isSelectedCity={currentCityKey === cityKey}
             onClick={onChangeCity}
             key={index}
             data={{ cityKey, title: data[cityKey].title }}
@@ -26,23 +28,27 @@ const Tabs = () => {
         ))}
       </div>
       <div className={styles.tabs_wrapper}>
-        <Cards list={data[city].list} />
+        <Cards list={data[currentCityKey].list} />
       </div>
     </div>
   );
 };
 
-const Tab: FC<{
+type TabProps = {
   data: { cityKey: CitiesKeys; title: string };
   onClick: (cityKey: CitiesKeys) => void;
-}> = ({ data, onClick }) => {
-  const { cityKey, title } = data;
+  isSelectedCity: boolean;
+}
 
+const Tab: FC<TabProps> = ({ data, onClick, isSelectedCity}) => {
+  const { cityKey, title } = data;
+  
+  const btnClass = classNames([styles.button, { [styles.button__active]: isSelectedCity === true }]);
   return (
     
-    <button className={styles.button} onClick={() => onClick(cityKey)}>
+    <button className={btnClass} onClick={() => onClick(cityKey)}>
       <Typography
-    type={TypographyType.DESCRIPTION}
+        type={TypographyType.DESCRIPTION}
   >
         {title}
         </Typography>

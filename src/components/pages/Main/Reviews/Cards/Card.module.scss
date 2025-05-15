@@ -16,7 +16,7 @@
 .decoration{
 background-color: colors.$primary;
 width: 54px;
-height: 134px;
+height: 124px;
 position: absolute;
 right: 0;
 top:0;
@@ -27,8 +27,8 @@ border-radius: 0px 10px 0px 10px;
      border-radius: 50%;
 &__wrapper {
     position: relative;
-    min-height: 140px;
-    min-width: 140px;
+    min-height: 130px;
+    min-width: 130px;
 &::before {
     z-index: 1;
     content: "''";
@@ -42,13 +42,11 @@ border-radius: 0px 10px 0px 10px;
 }
 
 .geolocation{
-  font-size: 20px;
   color: colors.$text-secondary;
   margin-top: 10px;
-  
 }
+
 .description{
-  font-size: 20px;
   color: colors.$text-secondary;
   margin-top: 10px;
   text-align: center;
@@ -56,7 +54,7 @@ border-radius: 0px 10px 0px 10px;
 
 .name{
     color: colors.$text-primary;
-    font-size: 27px;
+    font-size: 24px;
     margin-top: 10px;
 }
 
@@ -86,13 +84,12 @@ border-radius: 0px 10px 0px 10px;
   }
 
 .review{
-  font-size: 20px;
   color: colors.$text-secondary;
 }
 
 .stars{
   color: #FFB904;
-  font-size: 27px;
+  font-size: 24px;
 }
 
 

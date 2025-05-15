@@ -23,6 +23,8 @@ const Card: FC<CardType> = ({
           fill
         />
       </div>
+      <div className={styles.layout}>
+        <div className={styles.countryWrapper}>
       <Image
         className={styles.location}
         alt="location"
@@ -31,21 +33,24 @@ const Card: FC<CardType> = ({
         src={location}
       />
        <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="p"
         className={styles.country}
       >
         {country}
-      </Typography>
+          </Typography>
+          </div>
       <Typography
         type={TypographyType.TITLE}
         as="h3"
         className={styles.city}
       >
         {city}
-      </Typography>
+        </Typography>
+
+        <div className={styles.priceCountWrapper}>
       <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="div"
         className={styles.priceFrom}
       >
@@ -55,13 +60,15 @@ const Card: FC<CardType> = ({
         </span>
       </Typography>
       <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="div"
         className={styles.personCount}
       >
         Гостей: {personCount}
-        </Typography>
-    </div>
+          </Typography>
+          </div>
+      </div>
+      </div>
   );
 };
 

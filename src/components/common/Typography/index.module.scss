@@ -6,7 +6,7 @@
     font-family: var(--font-pt);
     font-size: 40px;
     @include typography.laptop{
-      font-size: 35px;
+      font-size: 34px;
     }
     @include typography.tablet{
       font-size: 30px;
@@ -21,7 +21,7 @@
     color: colors.$primary;
     font-size: 25px;
     @include typography.laptop{
-      font-size: 20px;
+      font-size: 22px;
     }
     @include typography.tablet{
         font-size: 18px;
@@ -70,5 +70,19 @@
     }
     @include typography.mobile{
       font-size:10px;
+    }
+}
+
+.cardText{
+  color: colors.$text-secondary;
+  font-size: 18px;
+  @include typography.laptop{
+    font-size: 16px;
+  }
+  @include typography.tablet{
+      font-size: 15px;
+    }
+    @include typography.mobile{
+      font-size:14px;
     }
 }

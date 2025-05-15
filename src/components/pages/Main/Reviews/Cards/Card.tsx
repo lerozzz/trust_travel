@@ -33,7 +33,7 @@ const Card: FC<CardType> = ({
       </Typography>
       
       <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="p"
         className={styles.geolocation}
       >
@@ -41,7 +41,7 @@ const Card: FC<CardType> = ({
       </Typography>
 
       <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="p"
         className={styles.description}
       >
@@ -53,7 +53,7 @@ const Card: FC<CardType> = ({
         <div className={styles.rating_description}>
 
         <Typography
-        type={TypographyType.DESCRIPTION}
+        type={TypographyType.CARD_TEXT}
         as="span"
         className={styles.review}
       >

@@ -1,3 +1,4 @@
+import { Button, ButtonType } from "@/components/common/Button";
 import { Typography, TypographyType } from "@/components/common/Typography";
 import Links from "./Links";
 import Phone from "./Phone";
@@ -9,7 +10,11 @@ const Content = () => {
     <div className={styles.content}>
       <Links />
       <Phone />
-      <button className={styles.application_button}>
+      <Button
+        type={ButtonType.FILLED_BUTTON}
+        as="button"
+        className={styles.application_button}
+      >
         <Typography
           type={TypographyType.HEADER}
           as="span"
@@ -17,7 +22,7 @@ const Content = () => {
           >
           Оставить заявку
           </Typography>
-      </button>
+        </Button>
     </div>
   );
 };
