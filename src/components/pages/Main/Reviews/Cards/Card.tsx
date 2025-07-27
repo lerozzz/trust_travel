@@ -1,4 +1,8 @@
-import { Typography, TypographyType } from "@/components/common/Typography";
+import {
+  Color,
+  Typography,
+  TypographyType,
+} from "@/components/common/Typography";
 import Image from "next/image";
 import { FC } from "react";
 import type { Card as CardType } from "../Cards/CardInfo";
@@ -25,41 +29,44 @@ const Card: FC<CardType> = ({
       </div>
 
       <Typography
-        type={TypographyType.TITLE}
+        type={TypographyType.CARD_TITLE}
         as="h3"
         className={styles.name}
+        color={Color.TEXT_PRIMARY}
       >
         {name}
       </Typography>
-      
+
       <Typography
         type={TypographyType.CARD_TEXT}
         as="p"
         className={styles.geolocation}
+        color={Color.TEXT_SECONDARY}
       >
-       {geolocation}
+        {geolocation}
       </Typography>
 
       <Typography
         type={TypographyType.CARD_TEXT}
         as="p"
         className={styles.description}
+        color={Color.TEXT_SECONDARY}
       >
-       {description}
+        {description}
       </Typography>
-      
+
       <div className={styles.rating_wrapper}>
         <hr className={styles.line_division} />
         <div className={styles.rating_description}>
-
-        <Typography
-        type={TypographyType.CARD_TEXT}
-        as="span"
-        className={styles.review}
-      >
-            Оценка: 
+          <Typography
+            type={TypographyType.CARD_TEXT}
+            as="span"
+            className={styles.review}
+            color={Color.TEXT_SECONDARY}
+          >
+            Оценка:
           </Typography>
-          
+
           <div className={styles.stars}>
             {"★".repeat(starsCount) + "☆".repeat(5 - starsCount)}
           </div>

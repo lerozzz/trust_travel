@@ -9,7 +9,7 @@ import { TourPackages } from "@/components/pages/Main/TourPackages";
 const Home = () => {
   return (
     <>
-       <Banner />
+      <Banner />
       <AboutUs />
       <PopularDestination />
       <HotTours />

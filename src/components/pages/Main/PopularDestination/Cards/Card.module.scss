@@ -1,11 +1,12 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
-@use "@mixins/typography" as typography;
+
+@use "@breakpoints" as breakpoints;
 
 .card{
     display: flex;
    position: relative;
-   min-height: 268px;
+   min-height: 240px;
    align-items: flex-end;
   }
   
@@ -47,32 +48,23 @@
 }
 
 
-.country{
-    color: colors.$background;
-}
+
+    
 
 .city{
-    color: colors.$background;
+    
     font-size: 32px;
-    @include typography.laptop{
+    @include breakpoints.laptop{
       font-size: 30px;
     }
-    @include typography.tablet{
+    @include breakpoints.tablet{
       font-size: 20px;
     }
-    @include typography.mobile{
+    @include breakpoints.mobile{
       font-size: 18px;
     }
 }
 
-
-.priceFrom{
-    color: colors.$background;
-}
-
-.personCount{
-    color: colors.$background;
-}
 
 .priceCountWrapper{
      display: flex;

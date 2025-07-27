@@ -1,4 +1,8 @@
-import { Typography, TypographyType } from "@/components/common/Typography";
+import {
+  Color,
+  Typography,
+  TypographyType,
+} from "@/components/common/Typography";
 import styles from "./Title.module.scss";
 
 const Title = () => {
@@ -8,18 +12,20 @@ const Title = () => {
         type={TypographyType.TITLE}
         as="h1"
         className={styles.title}
+        color={Color.TEXT_PRIMARY}
       >
         Горящие туры
-          </Typography>
+      </Typography>
       <Typography
         type={TypographyType.DESCRIPTION}
         as="p"
         className={styles.description}
+        color={Color.TEXT_SECONDARY}
       >
         В разделе «Горящие туры» вас ждут скидки и невероятные цены на отдых в
         лучших местах. Не упустите шанс отправиться в путешествие вашей мечты по
         самой привлекательной стоимости!
-        </Typography>
+      </Typography>
     </div>
   );
 };

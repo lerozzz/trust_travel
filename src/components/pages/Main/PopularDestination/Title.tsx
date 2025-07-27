@@ -1,4 +1,8 @@
-import { Typography, TypographyType } from "@/components/common/Typography";
+import {
+  Color,
+  Typography,
+  TypographyType,
+} from "@/components/common/Typography";
 import styles from "./Title.module.scss";
 
 const Title = () => {
@@ -7,7 +11,7 @@ const Title = () => {
       <Typography
         type={TypographyType.TITLE}
         as="h1"
-        color="#2c2c2c"
+        color={Color.TEXT_PRIMARY}
         className={styles.title}
       >
         Популярные напрвления
@@ -16,11 +20,12 @@ const Title = () => {
         type={TypographyType.DESCRIPTION}
         as="p"
         className={styles.description}
+        color={Color.TEXT_SECONDARY}
       >
         Trust Travel предлагает лучшие туры в самые популярные направления мира!
         Выбирайте из широкого списка курортов и стран, и мы поможем вам
         организовать незабываемое путешествие.
-        </Typography>
+      </Typography>
     </div>
   );
 };

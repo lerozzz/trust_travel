@@ -1,4 +1,9 @@
-import { Typography, TypographyType } from "@/components/common/Typography";
+import { Button, ButtonType } from "@/components/common/Button";
+import {
+  Color,
+  Typography,
+  TypographyType,
+} from "@/components/common/Typography";
 import styles from "./Description.module.scss";
 
 const Description = () => {
@@ -7,15 +12,16 @@ const Description = () => {
       <Typography
         type={TypographyType.OVERTITLE}
         as="p"
-       className={styles.overtitle}
-      >  
+        color={Color.PRIMARY}
+        className={styles.overtitle}
+      >
         Исследуйте с нами
       </Typography>
-      
+
       <Typography
         type={TypographyType.TITLE}
         as="h1"
-        color="#2c2c2c"
+        color={Color.TEXT_PRIMARY}
         className={styles.title}
       >
         Исследуйте новые направления с нами
@@ -24,29 +30,34 @@ const Description = () => {
       <Typography
         type={TypographyType.DESCRIPTION}
         as="p"
+        color={Color.TEXT_SECONDARY}
         className={styles.description}
       >
         Горящие туры и выгодные предложения для вашего незабываемого отдыха от
         Trust Travel
-        
       </Typography>
-      
-      <Typography
-          type={TypographyType.DESCRIPTION}
-          color="#fcfdff"
-          as="button"
-          className={styles.filled_button}
-      >
-        Забронировать
-      </Typography>
-      
-      <Typography
-          type={TypographyType.DESCRIPTION}
-          as="button"
-          className={styles.outline_button}
-        >
-        Узнать больше
-        </Typography>
+
+      <div className={styles.button_wrapper}>
+        <Button type={ButtonType.FILLED_BUTTON} as="button">
+          <Typography
+            type={TypographyType.DESCRIPTION}
+            color={Color.BACKGROUND}
+            as="span"
+          >
+            Забронировать
+          </Typography>
+        </Button>
+
+        <Button type={ButtonType.OTLINE_BUTTON} as="button">
+          <Typography
+            type={TypographyType.DESCRIPTION}
+            as="span"
+            color={Color.TEXT_PRIMARY}
+          >
+            Узнать больше
+          </Typography>
+        </Button>
+      </div>
     </div>
   );
 };

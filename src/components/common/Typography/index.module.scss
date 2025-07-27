@@ -1,88 +1,116 @@
-@use "@mixins/typography" as typography;
 @use "@colors" as colors;
 @use "@breakpoints" as breakpoints;
 
+
 .title{
     font-family: var(--font-pt);
-    font-size: 40px;
-    @include typography.laptop{
+    font-size: 34px;
+    @include breakpoints.laptop{
       font-size: 34px;
     }
-    @include typography.tablet{
+    @include breakpoints.tablet{
       font-size: 30px;
     }
-    @include typography.mobile{
+    @include breakpoints.mobile{
       font-size:20px;
     }
 }
 
 .overtitle{
     font-weight: 700;
-    color: colors.$primary;
-    font-size: 25px;
-    @include typography.laptop{
+    font-size: 22px;
+    @include breakpoints.laptop{
       font-size: 22px;
     }
-    @include typography.tablet{
+    @include breakpoints.tablet{
         font-size: 18px;
       }
-      @include typography.mobile{
+      @include breakpoints.mobile{
         font-size: 15px;
       }
 }
 
 .description{
-    color: colors.$text-secondary;
-    font-size: 21px;
-    @include typography.laptop{
+    font-size: 18px;
+    @include breakpoints.laptop{
       font-size:18px;
     }
-    @include typography.tablet{
+    @include breakpoints.tablet{
         font-size: 17px;
       }
-      @include typography.mobile{
+      @include breakpoints.mobile{
         font-size:10px;
       }
 }
 
 .header{
-  color: colors.$text-secondary;
-  font-size: 21px;
-  @include typography.laptop{
+  font-size: 18px;
+  @include breakpoints.laptop{
     font-size:18px;
   }
-  @include typography.tablet{
+  @include breakpoints.tablet{
       font-size: 17px;
     }
-    @include typography.mobile{
+    @include breakpoints.mobile{
       font-size:10px;
     }
 }
 
 .footer{
-  color: colors.$text-secondary;
-  font-size: 21px;
-  @include typography.laptop{
-    font-size:18px;
+  font-size: 18px;
+  @include breakpoints.laptop{
+    font-size:17px;
   }
-  @include typography.tablet{
-      font-size: 17px;
+  @include breakpoints.tablet{
+      font-size: 16px;
     }
-    @include typography.mobile{
+    @include breakpoints.mobile{
       font-size:10px;
     }
 }
 
 .cardText{
-  color: colors.$text-secondary;
-  font-size: 18px;
-  @include typography.laptop{
-    font-size: 16px;
+  
+  font-size: 16px;
+  @include breakpoints.laptop{
+    font-size: 14px;
   }
-  @include typography.tablet{
-      font-size: 15px;
+  @include breakpoints.tablet{
+      font-size: 13px;
     }
-    @include typography.mobile{
-      font-size:14px;
+    @include breakpoints.mobile{
+      font-size:10px;
     }
+}
+.cardTitle{
+    font-family: var(--font-pt);
+    font-size: 24px;
+    @include breakpoints.laptop{
+      font-size: 20px;
+    }
+    @include breakpoints.tablet{
+      font-size: 18px;
+    }
+    @include breakpoints.mobile{
+      font-size: 16px;
+    }
+}
+
+.primary{
+  color: colors.$primary;
+}
+
+.secondary{
+  color: colors.$secondary;
+}
+
+.text-primary{
+  color: colors.$text-primary;
+}
+
+.text-secondary{
+  color: colors.$text-secondary;
+}
+.background{
+  color: colors.$background;
 }

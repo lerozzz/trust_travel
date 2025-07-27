@@ -1,4 +1,8 @@
-import { Typography, TypographyType } from "@/components/common/Typography";
+import {
+  Color,
+  Typography,
+  TypographyType,
+} from "@/components/common/Typography";
 import location from "@public/main/location.svg";
 import Image from "next/image";
 import { FC } from "react";
@@ -25,50 +29,54 @@ const Card: FC<CardType> = ({
       </div>
       <div className={styles.layout}>
         <div className={styles.countryWrapper}>
-      <Image
-        className={styles.location}
-        alt="location"
-        width={30}
-        height={30}
-        src={location}
-      />
-       <Typography
-        type={TypographyType.CARD_TEXT}
-        as="p"
-        className={styles.country}
-      >
-        {country}
+          <Image
+            className={styles.location}
+            alt="location"
+            width={30}
+            height={30}
+            src={location}
+          />
+          <Typography
+            type={TypographyType.CARD_TEXT}
+            as="p"
+            className={styles.country}
+            color={Color.BACKGROUND}
+          >
+            {country}
           </Typography>
-          </div>
-      <Typography
-        type={TypographyType.TITLE}
-        as="h3"
-        className={styles.city}
-      >
-        {city}
+        </div>
+        <Typography
+          type={TypographyType.TITLE}
+          as="h3"
+          className={styles.city}
+          color={Color.BACKGROUND}
+        >
+          {city}
         </Typography>
 
         <div className={styles.priceCountWrapper}>
-      <Typography
-        type={TypographyType.CARD_TEXT}
-        as="div"
-        className={styles.priceFrom}
-      >
-        Цена от:{" "}
-        <span className={styles.priceValue}>
-          {priceFrom.toLocaleString()} ₸
-        </span>
-      </Typography>
-      <Typography
-        type={TypographyType.CARD_TEXT}
-        as="div"
-        className={styles.personCount}
-      >
-        Гостей: {personCount}
+          <Typography
+            type={TypographyType.CARD_TEXT}
+            as="div"
+            className={styles.priceFrom}
+            color={Color.BACKGROUND}
+          >
+            Цена от:{" "}
+            <span className={styles.priceValue}>
+              {priceFrom.toLocaleString()} ₸
+            </span>
           </Typography>
-          </div>
+          <Typography
+            type={TypographyType.CARD_TEXT}
+            as="div"
+            className={styles.personCount}
+            color={Color.BACKGROUND}
+          >
+            Гостей: {personCount}
+          </Typography>
+        </div>
       </div>
-      </div>
+    </div>
   );
 };
 

@@ -1,21 +1,12 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
-@use "@mixins/typography" as typography;
+
 
 
 .button{
-    background-color: colors.$background;
-   
-    border-radius: 10px;
-    border-color: colors.$background;
-    width: 180px;
-    height: 48px;
-    font-family:manrope;
-    font-weight: 600;
-    filter: drop-shadow(1px 1px 1px);
     &__active{
        background-color: colors.$primary;
-        
+        color: colors.$background; 
     }
 } 
 

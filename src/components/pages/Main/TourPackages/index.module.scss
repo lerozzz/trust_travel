@@ -1,6 +1,6 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
-@use "@mixins/typography" as typography;
+
 
 .wrapper{
     position: relative;
@@ -12,13 +12,7 @@
 
 .button{
     background-color: Transparent;
-    color: colors.$background; 
-    border-color: colors.$primary;
-    border-radius: 10px;
-    width: 180px;
-    height: 48px;
-    font-family:manrope;
-    font-weight: 600;
+   
 }
 
 .button_wrapper{

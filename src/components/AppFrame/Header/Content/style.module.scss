@@ -1,11 +1,12 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
-@use "@mixins/typography" as typography;
+
 
 .content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     column-gap: 88px;
 }
 

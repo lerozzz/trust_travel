@@ -1,11 +1,15 @@
 "use client";
-import { Typography, TypographyType } from "@/components/common/Typography";
+import { Button, ButtonType } from "@/components/common/Button";
+import {
+  Color,
+  Typography,
+  TypographyType,
+} from "@/components/common/Typography";
 import classNames from "classnames";
 import { FC, useState } from "react";
 import Cards from "../Cards/index";
 import { CitiesKeys, data } from "./data";
 import styles from "./index.module.scss";
-
 
 const Tabs = () => {
   const [currentCityKey, setCity] = useState<CitiesKeys>("all");
@@ -38,22 +42,30 @@ type TabProps = {
   data: { cityKey: CitiesKeys; title: string };
   onClick: (cityKey: CitiesKeys) => void;
   isSelectedCity: boolean;
-}
+};
 
-const Tab: FC<TabProps> = ({ data, onClick, isSelectedCity}) => {
+const Tab: FC<TabProps> = ({ data, onClick, isSelectedCity }) => {
   const { cityKey, title } = data;
-  
-  const btnClass = classNames([styles.button, { [styles.button__active]: isSelectedCity === true }]);
+
+  const btnClass = classNames([
+    styles.button,
+    { [styles.button__active]: isSelectedCity === true },
+  ]);
   return (
-    
-    <button className={btnClass} onClick={() => onClick(cityKey)}>
+    <Button
+      type={ButtonType.OTLINE_BUTTON}
+      as="button"
+      className={btnClass}
+      onClick={() => onClick(cityKey)}
+    >
       <Typography
         type={TypographyType.DESCRIPTION}
-  >
+        className={btnClass}
+        color={Color.TEXT_SECONDARY}
+      >
         {title}
-        </Typography>
-      </button>
-      
+      </Typography>
+    </Button>
   );
 };
 export default Tabs;

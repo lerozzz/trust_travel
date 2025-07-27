@@ -1,5 +1,16 @@
+@use "@breakpoints" as breakpoints;
+
 .wrapper{
     display: flex;
     align-items: center;
     margin-top: 140px;
+    column-gap: 60px;
+     
+    @include breakpoints.laptop{
+    column-gap: 40px;
+  }
+
+  @include breakpoints.max-width(breakpoints.$sm) {
+    column-gap: 20px;
+  }
  }
