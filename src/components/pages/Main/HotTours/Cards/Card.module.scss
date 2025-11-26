@@ -3,16 +3,18 @@
 @use "@breakpoints" as breakpoints;
 
 .card{
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Тень */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+  border-radius: 10px;
 }
 
 .image {
      border-radius: 10px;
+     object-fit: cover;
 &__wrapper {
     position: relative;
     width: 100%;
@@ -23,7 +25,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Чтобы градиент не мешал кликам по изображению */
+    pointer-events: none;
     border-radius: 10px;
   }
 }
@@ -47,7 +49,7 @@
 }
 
 .line_division{
-  border: 1px solid colors.$text-secondary;
+   border: 0.5px solid colors.$search-form;
   margin-top: 10px;
   width: 80%;
   

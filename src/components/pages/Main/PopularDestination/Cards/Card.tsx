@@ -19,13 +19,7 @@ const Card: FC<CardType> = ({
   return (
     <div className={styles.card}>
       <div className={styles.image__wrapper}>
-        <Image
-          src={image}
-          alt={country}
-          objectFit="cover"
-          className={styles.image}
-          fill
-        />
+        <Image src={image} alt={country} className={styles.image} fill />
       </div>
       <div className={styles.layout}>
         <div className={styles.countryWrapper}>

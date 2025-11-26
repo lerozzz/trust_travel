@@ -25,6 +25,7 @@ border-radius: 0px 10px 0px 10px;
 
 .image {
      border-radius: 50%;
+     object-fit: cover;
 &__wrapper {
     position: relative;
     min-height: 120px;
@@ -74,9 +75,8 @@ border-radius: 0px 10px 0px 10px;
 }
 
 .line_division{
-  border: 1px solid colors.$text-secondary;
+  border: 0.5px solid colors.$search-form;
   width: 100%;
-  margin-bottom: 10px;
   }
 
 .stars{

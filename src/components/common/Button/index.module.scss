@@ -26,7 +26,50 @@ border-color: colors.$background;
     }
 }
 
+.filledButtonSearch{
+display: inline-block;
+background-color: colors.$primary;
+color: colors.$background; 
+border-radius: 10px;
+width: 320px;
+height: 48px;
+font-family:manrope;
+font-weight: 600;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+0 1px 3px rgba(0, 0, 0, 0.08);
+border-color: colors.$background;
 
+@include breakpoints.laptop{
+      width: 320px;
+    }
+    @include breakpoints.tablet{
+      width: 300px;
+    }
+    @include breakpoints.mobile{
+      width: 280px;
+    }
+}
+
+.filledButtonPagination{
+display: inline-block;
+background-color: colors.$primary;
+color: colors.$background; 
+width: 48px;
+height: 48px;
+font-family:manrope;
+font-weight: 600;
+border-color: colors.$background;
+
+@include breakpoints.laptop{
+      width: 48px;
+    }
+    @include breakpoints.tablet{
+      width: 48px;
+    }
+    @include breakpoints.mobile{
+      width: 48px;
+    }
+}
 
 .outlineButton{
   background-color: colors.$background;
@@ -39,4 +82,24 @@ border-color: colors.$background;
   font-weight: 600;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.outlineButtonPagination{
+  background-color: colors.$background;
+  color: colors.$text-primary; 
+  border-color: colors.$primary;
+  width: 48px;
+  height: 48px;
+  font-family:manrope;
+  font-weight: 600;
+  
+@include breakpoints.laptop{
+      width: 48px;
+    }
+    @include breakpoints.tablet{
+      width: 48px;
+    }
+    @include breakpoints.mobile{
+      width: 48px;
+    }
 }

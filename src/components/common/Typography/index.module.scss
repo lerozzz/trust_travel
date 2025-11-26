@@ -16,6 +16,48 @@
     }
 }
 
+.title_secondary{
+    font-family: var(--font-pt);
+    font-size: 30px;
+    @include breakpoints.laptop{
+      font-size: 30px;
+    }
+    @include breakpoints.tablet{
+      font-size: 28px;
+    }
+    @include breakpoints.mobile{
+      font-size:18px;
+    }
+}
+
+.title_tours{
+    font-family: var(--font-pt);
+    font-size: 42px;
+    @include breakpoints.laptop{
+      font-size: 40px;
+    }
+    @include breakpoints.tablet{
+      font-size: 34px;
+    }
+    @include breakpoints.mobile{
+      font-size:30px;
+    }
+}
+
+.filters_title{
+    font-family: var(--font-pt);
+    font-size: 28px;
+    @include breakpoints.laptop{
+      font-size: 28px;
+    }
+    @include breakpoints.tablet{
+      font-size: 26px;
+    }
+    @include breakpoints.mobile{
+      font-size: 20px;
+    }
+}
+
 .overtitle{
     font-weight: 700;
     font-size: 22px;
@@ -40,6 +82,18 @@
       }
       @include breakpoints.mobile{
         font-size:10px;
+      }
+}
+.description_tours{
+    font-size: 32px;
+    @include breakpoints.laptop{
+      font-size: 26px;
+    }
+    @include breakpoints.tablet{
+        font-size: 20px;
+      }
+      @include breakpoints.mobile{
+        font-size: 16px;
       }
 }
 
@@ -69,7 +123,7 @@
     }
 }
 
-.cardText{
+.card_text{
   
   font-size: 16px;
   @include breakpoints.laptop{
@@ -82,7 +136,7 @@
       font-size:10px;
     }
 }
-.cardTitle{
+.card_title{
     font-family: var(--font-pt);
     font-size: 24px;
     @include breakpoints.laptop{
@@ -93,6 +147,21 @@
     }
     @include breakpoints.mobile{
       font-size: 16px;
+    }
+}
+
+.card_title_secondary{
+    font-family: var(--font-pt);
+    font-size: 22px;
+     font-weight: 600;
+    @include breakpoints.laptop{
+      font-size: 18px;
+    }
+    @include breakpoints.tablet{
+      font-size: 16px;
+    }
+    @include breakpoints.mobile{
+      font-size: 14px;
     }
 }
 
@@ -113,4 +182,10 @@
 }
 .background{
   color: colors.$background;
+}
+.search_form{
+  color: colors.$search-form;
+}
+.stars{
+  color: colors.$stars;
 }

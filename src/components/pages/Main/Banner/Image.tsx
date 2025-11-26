@@ -7,19 +7,14 @@ const BannerImage = () => {
   return (
     <div className={styles.images}>
       <div className={styles.backgroundBannerImage}>
-        <Image
-          alt="backgroundBannerImage"
-          objectFit="fill"
-          src={background_image}
-          fill
-        />
+        <Image alt="backgroundBannerImage" src={background_image} />
       </div>
       <div className={styles.mainBannerImage}>
         <Image
           alt="mainBannerImage"
-          objectFit="contain"
           src={banner_image}
           fill
+          style={{ objectFit: "contain" }}
         />
       </div>
     </div>

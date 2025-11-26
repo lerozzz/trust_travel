@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
-
 import AppFrame from "@/components/AppFrame";
+import type { Metadata } from "next";
 import styles from "./body.module.scss";
 import { manrope, pt_serif } from "./fonts";
 import "./globals.scss";

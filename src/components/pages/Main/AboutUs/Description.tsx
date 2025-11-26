@@ -1,3 +1,4 @@
+import { routes } from "@/components/AppFrame/Header/Content/Links/data";
 import { Button, ButtonType } from "@/components/common/Button";
 import {
   Color,
@@ -7,6 +8,7 @@ import {
 import benefit_1 from "@public/main/benefit_1.svg";
 import benefit_2 from "@public/main/benefit_2.svg";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Description.module.scss";
 
 const Decription = () => {
@@ -74,14 +76,16 @@ const Decription = () => {
       </div>
 
       <div className={styles.button_wrapper}>
-        <Button type={ButtonType.OTLINE_BUTTON} as="button">
-          <Typography
-            type={TypographyType.DESCRIPTION}
-            color={Color.TEXT_SECONDARY}
-          >
-            Читать далее
-          </Typography>
-        </Button>
+        <Link href={routes.aboutUs()}>
+          <Button type={ButtonType.OTLINE_BUTTON} as="button">
+            <Typography
+              type={TypographyType.DESCRIPTION}
+              color={Color.TEXT_SECONDARY}
+            >
+              Читать далее
+            </Typography>
+          </Button>
+        </Link>
       </div>
     </div>
   );

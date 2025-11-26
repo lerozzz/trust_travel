@@ -24,6 +24,7 @@ export default [
       semi: "error",
       "prefer-const": "error",
       "react/react-in-jsx-scope": "off",
+      "no-console": "warn",
     },
   },
 ];

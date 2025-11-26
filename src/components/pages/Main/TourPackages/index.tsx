@@ -15,7 +15,6 @@ export const TourPackages = () => {
       <Image
         src={tourPackages}
         alt="Туристические пакеты"
-        objectFit="cover"
         className={styles.image}
       />
       <div className={styles.content}>

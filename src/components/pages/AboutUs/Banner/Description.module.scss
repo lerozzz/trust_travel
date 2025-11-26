@@ -1,0 +1,36 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+@use "@breakpoints" as breakpoints;
+
+.wrapper{ 
+    min-width: 580px;
+    margin: 50px 0 200px 0;
+    z-index: 1;
+  }
+
+.overtitle{
+  text-transform: uppercase;
+}
+
+ .title {
+   margin-top: 20px;
+   font-weight: 700;
+  display: flex;
+  align-self: center;
+ }
+
+.description {
+  margin-top: 20px;
+}
+  
+  .wrapper__benefit{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: 600;
+  }
+    .wrapper__benefits{
+      margin-top: 50px;
+    }

@@ -19,13 +19,7 @@ const Card: FC<CardType> = ({
     <div className={styles.card}>
       <div className={styles.decoration} />
       <div className={styles.image__wrapper}>
-        <Image
-          src={image}
-          alt={geolocation}
-          objectFit="cover"
-          className={styles.image}
-          fill
-        />
+        <Image src={image} alt={geolocation} className={styles.image} fill />
       </div>
 
       <Typography

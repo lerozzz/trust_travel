@@ -6,7 +6,7 @@ import {
   cardsList,
   karagandaCards,
   shymkentCards,
-} from "../Cards/CardInfo";
+} from "../Cards/data";
 
 export const data: Record<string, { title: string; list: Card[] }> = {
   all: {

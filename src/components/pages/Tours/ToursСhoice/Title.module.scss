@@ -1,0 +1,15 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+
+.title_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.title{
+    max-width: 400px;
+}

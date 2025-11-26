@@ -1,0 +1,44 @@
+@use "@colors" as colors;
+@use "@mixins/common" as common;
+
+.card {
+    margin: 100px 0 100px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
+    grid-gap: 32px;
+    align-items: stretch;
+    justify-content: flex-start;
+    position: relative;
+    
+    &__wrapper {
+        cursor: pointer;
+         //border-bottom: 1px solid colors.$text-secondary;
+        min-height: 120px;
+        height: min-content; 
+        padding: 20px; 
+        position: relative;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+        border-radius: 10px;
+         transition: .3s cubic-bezier(1, 0, 0, 1);   
+    }
+
+    &__question {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__answer {
+        max-height: 0px;
+        transition: .3s cubic-bezier(1, 0, 0, 1);
+        overflow: hidden;
+         &--open {
+            max-height: 1000px;
+            margin-top: 16px;
+        }
+    }
+}
+.line_division{
+    border: 1px solid colors.$text-secondary;
+}

@@ -8,19 +8,14 @@ const Card: FC<CardType> = ({ country, photo }) => {
   return (
     <div className={styles.card}>
       <div className={styles.image__wrapper}>
-        <Image
-          src={photo}
-          alt={country}
-          objectFit="cover"
-          className={styles.image}
-        />
+        <Image src={photo} alt={country} className={styles.image} />
         <Typography
-        type={TypographyType.TITLE}
-        as="h1"
-        className={styles.country}
-      >
+          type={TypographyType.TITLE}
+          as="h1"
+          className={styles.country}
+        >
           {country}
-          </Typography>
+        </Typography>
       </div>
     </div>
   );

@@ -1,0 +1,26 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+
+.image{
+     border-radius: 10px; 
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+.full_name, .position {
+   text-align: center;
+   margin-top: 20px;
+}
+
+    .social_net_icons{
+        display: flex;
+        flex-direction: row;
+        column-gap: 35px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+

@@ -23,10 +23,9 @@
 }
 
 .image{
-   z-index: 1;
-    object-fit: fill;
     width: 100%;
     filter: brightness(50%);
+    object-fit: cover;
 }
 
 .content{

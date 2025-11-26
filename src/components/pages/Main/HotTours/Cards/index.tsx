@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Card as CardType } from "../Cards/CardInfo";
 import Card from "./Card";
+import { Card as CardType } from "./data";
 import styles from "./index.module.scss";
 
 interface CardsProps {

@@ -6,8 +6,8 @@ import {
 import cn from "classnames";
 import Image from "next/image";
 import { FC } from "react";
-import type { Card as CardType } from "../Cards/CardInfo";
 import styles from "./Card.module.scss";
+import type { Card as CardType } from "./data";
 
 const Card: FC<CardType> = ({
   image,
@@ -22,13 +22,7 @@ const Card: FC<CardType> = ({
     <div className={styles.card}>
       {/* cn тут не нужен, но надо знать его в работе с scss */}
       <div className={cn(styles.image__wrapper)}>
-        <Image
-          src={image}
-          alt={hotelName}
-          objectFit="cover"
-          className={styles.image}
-          fill
-        />
+        <Image src={image} alt={hotelName} className={styles.image} fill />
       </div>
       <Typography
         type={TypographyType.CARD_TEXT}

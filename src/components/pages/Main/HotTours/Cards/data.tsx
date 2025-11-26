@@ -48,7 +48,7 @@ export const cardsList: Card[] = [
 
 export const astanaCards: Card[] = [
   {
-    image: "/images/astana1.jpg",
+    image: "/image/astana1.jpg",
     geolocation: "Астана",
     hotelName: "Астана Гранд Отель",
     starsCount: 5,
@@ -57,7 +57,7 @@ export const astanaCards: Card[] = [
     priceFrom: 30000,
   },
   {
-    image: "/images/astana2.jpg",
+    image: "/image/astana2.jpg",
     geolocation: "Астана",
     hotelName: "Байтерек Отель",
     starsCount: 4,
@@ -66,7 +66,7 @@ export const astanaCards: Card[] = [
     priceFrom: 22000,
   },
   {
-    image: "/images/astana3.jpg",
+    image: "/image/astana3.jpg",
     geolocation: "Астана",
     hotelName: "Нур-Султан Плаза",
     starsCount: 3,
@@ -78,7 +78,7 @@ export const astanaCards: Card[] = [
 
 export const almatyCards: Card[] = [
   {
-    image: "/images/almaty1.jpg",
+    image: "/image/almaty1.jpg",
     geolocation: "Алматы",
     hotelName: "Алматы Премиум",
     starsCount: 5,
@@ -87,7 +87,7 @@ export const almatyCards: Card[] = [
     priceFrom: 35000,
   },
   {
-    image: "/images/almaty2.jpg",
+    image: "/image/almaty2.jpg",
     geolocation: "Алматы",
     hotelName: "Горный Отель",
     starsCount: 4,
@@ -96,7 +96,7 @@ export const almatyCards: Card[] = [
     priceFrom: 24000,
   },
   {
-    image: "/images/almaty2.jpg",
+    image: "/image/almaty2.jpg",
     geolocation: "Алматы",
     hotelName: "Горный Отель",
     starsCount: 4,
@@ -108,7 +108,7 @@ export const almatyCards: Card[] = [
 
 export const karagandaCards: Card[] = [
   {
-    image: "/images/karaganda1.jpg",
+    image: "/image/karaganda1.jpg",
     geolocation: "Караганда",
     hotelName: "Караганда Гранд Отель",
     starsCount: 4,
@@ -117,7 +117,7 @@ export const karagandaCards: Card[] = [
     priceFrom: 27000,
   },
   {
-    image: "/images/karaganda2.jpg",
+    image: "/image/karaganda2.jpg",
     geolocation: "Караганда",
     hotelName: "Шахтер Плаза",
     starsCount: 3,
@@ -126,7 +126,7 @@ export const karagandaCards: Card[] = [
     priceFrom: 20000,
   },
   {
-    image: "/images/karaganda3.jpg",
+    image: "/image/karaganda3.jpg",
     geolocation: "Караганда",
     hotelName: "Металлург Отель",
     starsCount: 5,
@@ -138,7 +138,7 @@ export const karagandaCards: Card[] = [
 
 export const shymkentCards: Card[] = [
   {
-    image: "/images/shymkent1.jpg",
+    image: "/image/shymkent1.jpg",
     geolocation: "Шымкент",
     hotelName: "Шымкент Палас",
     starsCount: 5,
@@ -147,7 +147,7 @@ export const shymkentCards: Card[] = [
     priceFrom: 40000,
   },
   {
-    image: "/images/shymkent2.jpg",
+    image: "/image/shymkent2.jpg",
     geolocation: "Шымкент",
     hotelName: "Туран Отель",
     starsCount: 4,
@@ -156,7 +156,7 @@ export const shymkentCards: Card[] = [
     priceFrom: 25000,
   },
   {
-    image: "/images/shymkent3.jpg",
+    image: "/image/shymkent3.jpg",
     geolocation: "Шымкент",
     hotelName: "Гранд Шымкент",
     starsCount: 3,
@@ -168,7 +168,7 @@ export const shymkentCards: Card[] = [
 
 export const aktauCards: Card[] = [
   {
-    image: "/images/aktau1.jpg",
+    image: "/image/aktau1.jpg",
     geolocation: "Актау",
     hotelName: "Актау Резорт",
     starsCount: 5,
@@ -177,7 +177,7 @@ export const aktauCards: Card[] = [
     priceFrom: 50000,
   },
   {
-    image: "/images/aktau2.jpg",
+    image: "/image/aktau2.jpg",
     geolocation: "Актау",
     hotelName: "Каспий Отель",
     starsCount: 4,
@@ -186,7 +186,7 @@ export const aktauCards: Card[] = [
     priceFrom: 30000,
   },
   {
-    image: "/images/aktau3.jpg",
+    image: "/image/aktau3.jpg",
     geolocation: "Актау",
     hotelName: "Марина Палас",
     starsCount: 3,

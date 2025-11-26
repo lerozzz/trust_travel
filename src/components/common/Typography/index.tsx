@@ -4,12 +4,17 @@ import styles from "./index.module.scss";
 
 export enum TypographyType {
   TITLE = "title",
+  TITLE_SECONDARY = "title_secondary",
+  TITLE_TOURS = "title_tours",
   OVERTITLE = "overtitle",
   DESCRIPTION = "description",
+  DESCRIPTION_TOURS = "description_tours",
   HEADER = "header",
   FOOTER = "footer",
-  CARD_TEXT = "cardText",
-  CARD_TITLE = "cardTitle",
+  CARD_TEXT = "card_text",
+  CARD_TITLE = "card_title",
+  CARD_TITLE_SECONDARY = "card_title_secondary",
+  FILTERS_TITLE = "filters_title",
 }
 
 export enum Color {
@@ -18,6 +23,8 @@ export enum Color {
   TEXT_PRIMARY = "text-primary",
   TEXT_SECONDARY = "text-secondary",
   BACKGROUND = "background",
+  SEARCH_FORM = "search_form",
+  STARS = "stars",
 }
 
 export type TypographyProps = {
@@ -36,7 +43,7 @@ export const Typography: React.FC<TypographyProps> = ({
   color = Color.BACKGROUND,
 }) => {
   return (
-    <Tag className={cn([className, styles[type], styles[color]])}>
+    <Tag className={cn([styles[type], styles[color], className])}>
       {children}
     </Tag>
   );

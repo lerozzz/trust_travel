@@ -1,14 +1,18 @@
 import cn from "classnames";
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import styles from "./index.module.scss";
 
 export enum ButtonType {
   OTLINE_BUTTON = "outlineButton",
   FILLED_BUTTON = "filledButton",
+  FILLED_BUTTON_SEARCH = "filledButtonSearch",
+  OTLINE_BUTTON_PAGINATION = "outlineButtonPagination",
+  FILLED_BUTTON_PAGINATION = "filledButtonPagination",
 }
 
 export type ButtonProps = {
   type: ButtonType; //Вариаты текста
+  rootType?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   children: React.ReactNode; //Компонент принимает вложеные элементы(<Вложенные элементы-все между закрыв и открыв тегом>)
   className?: string; //Передаем не обязательно строку
   as?: keyof JSX.IntrinsicElements; //Рендер HTML элемента
@@ -20,10 +24,12 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   className,
   bgColor,
+  rootType = "button",
   ...other
 }) => {
   return (
     <button
+      type={rootType}
       className={cn([className, styles[type]])}
       style={{ backgroundColor: bgColor }}
       {...other}

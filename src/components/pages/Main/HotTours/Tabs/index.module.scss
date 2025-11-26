@@ -1,15 +1,12 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
 
-
-
 .button{
     &__active{
        background-color: colors.$primary;
         color: colors.$background; 
     }
 } 
-
 
 .button_wrapper{
   display: flex;
