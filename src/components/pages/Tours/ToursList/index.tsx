@@ -1,7 +1,8 @@
+"use client";
 import { Container } from "@common/Container";
 import { observer } from "mobx-react-lite";
-import { useSearchParams } from "next/navigation";
-import { allTours } from "../(model)/data";
+
+import { useToursPageStore } from "../(model)/context";
 import { Cards } from "./Cards";
 import { DateDuration } from "./DateDuration";
 import { DepatureCities } from "./DepatureCities";
@@ -11,10 +12,7 @@ import { Price } from "./Price";
 import { Raiting } from "./Raiting";
 
 export const ToursList = observer(() => {
-  const searchParams = useSearchParams();
-  // useEffect(() => {
-  //   const pageFromUrl = searchParams.get("page");
-  // }, [searchParams]);
+  const { tourList, isEmptyTours } = useToursPageStore();
 
   return (
     <Container>
@@ -25,11 +23,11 @@ export const ToursList = observer(() => {
           <DateDuration />
           <Raiting />
         </div>
-        <div className={styles.cards_wrapper}>
-          <Cards allTours={allTours} />
-        </div>
+        <Cards isEmptyTours={isEmptyTours} allTours={tourList} />
       </div>
-      <Pagination />
+      <div className={styles.pagination_wrapper}>
+        <Pagination />
+      </div>
     </Container>
   );
 });

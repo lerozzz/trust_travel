@@ -1,4 +1,5 @@
 "use client";
+import { Tour } from "@/app/api/tours/list/data";
 import { useRootStore } from "@/components/AppFrame/(model)/RootStore/context";
 import {
   createContext,
@@ -9,14 +10,29 @@ import {
 } from "react";
 import { TourPageStore } from "./store";
 
+type ToursStoreProviderProps = PropsWithChildren<{
+  initData: { tourList: Tour[]; maxCount: number };
+  searchParams: { page: number };
+}>;
+
 const StoreContext = createContext<TourPageStore | null>(null);
 
-export const ToursStoreProvider: FC<PropsWithChildren> = ({ children }) => {
+export const ToursStoreProvider: FC<ToursStoreProviderProps> = (props) => {
+  const {
+    children,
+    initData: { maxCount, tourList },
+    searchParams: { page },
+  } = props;
   const rootStore = useRootStore();
-  // const store = new TourPageStore();
+
   const storeRef = useRef<TourPageStore | null>(null);
   if (!storeRef.current) {
-    storeRef.current = new TourPageStore({ rootStore });
+    storeRef.current = new TourPageStore({
+      rootStore,
+      tourList,
+      maxCount,
+      searchParams: { page },
+    });
   }
   return (
     <StoreContext.Provider value={storeRef.current}>

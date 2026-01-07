@@ -5,9 +5,10 @@ import { default as maldives } from "@public/main/tours_maldives.jpg";
 import { default as shymkent } from "@public/main/tours_shymkent.jpg";
 import { default as sri_lanka } from "@public/main/tours_sri_lanka.jpg";
 import { default as thailand } from "@public/main/tours_thailand.png";
+import { default as turkye_kemer } from "@public/main/tours_turkey_kemer.webp";
 import { default as turkye } from "@public/main/tours_turkye.png";
 import { default as uae } from "@public/main/tours_uae.png";
-import { Tour } from "./type";
+import { StaticImageData } from "next/image";
 
 export const allTours: Tour[] = [
   {
@@ -195,7 +196,7 @@ export const allTours: Tour[] = [
     children: 0,
     hotelName: "Crystal Deluxe Kemer",
     city: "Кемер",
-    image: turkye,
+    image: turkye_kemer,
     description: "Спокойный отдых в Кемере рядом с морем и горами.",
   },
   {
@@ -384,3 +385,22 @@ export const allTours: Tour[] = [
     description: "Роскошный отель в Дохе с видом на Персидский залив.",
   },
 ];
+
+export type Tour = {
+  id: number;
+  country: string;
+  countryCode: string;
+  departureCity: string;
+  dateFrom: string;
+  dateTo: string;
+  startNight: number;
+  endNight: number;
+  rating: number;
+  price: number;
+  adults: number;
+  children: number;
+  hotelName: string;
+  city: string;
+  image: string | StaticImageData;
+  description: string;
+};

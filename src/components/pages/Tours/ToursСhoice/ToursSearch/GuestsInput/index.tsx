@@ -11,7 +11,8 @@ import tourist from "@public/main/tourist.svg";
 import { observer } from "mobx-react-lite";
 import Image from "next/image";
 import { useState } from "react";
-import { useToursPageFilterStore } from "../../../(model)/context";
+
+import { useToursPageFilterStore } from "@/components/pages/Tours/(model)/context";
 import { Counter } from "./Counter";
 import { CounterButtons } from "./CounterButtons";
 import styles from "./index.module.scss";

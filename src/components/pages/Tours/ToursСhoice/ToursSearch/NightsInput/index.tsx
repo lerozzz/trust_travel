@@ -4,11 +4,12 @@ import { observer } from "mobx-react-lite";
 import Image from "next/image";
 import { FC } from "react";
 import DatePicker from "react-multi-date-picker";
-import { useToursPageStore } from "../../../(model)/context";
+
+import { useToursPageFilterStore } from "@/components/pages/Tours/(model)/context";
 import styles from "./index.module.scss";
 
 export const NightsInput: FC = observer(() => {
-  const { onChangeNights } = useToursPageStore();
+  const { onChangeNights } = useToursPageFilterStore();
   return (
     <div className={styles.nights_wrapper}>
       <DatePicker

@@ -3,7 +3,8 @@ import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import { observer } from "mobx-react-lite";
 import { FC } from "react";
-import { useToursPageFilterStore } from "../../../(model)/context";
+
+import { useToursPageFilterStore } from "@/components/pages/Tours/(model)/context";
 import { countries } from "./data";
 
 export const LocationSelect: FC = observer(() => {

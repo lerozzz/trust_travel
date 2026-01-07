@@ -7,6 +7,7 @@ import {
 import Checkbox from "@mui/material/Checkbox";
 import { observer } from "mobx-react-lite";
 import { FC } from "react";
+
 import { useToursPageFilterStore } from "../../(model)/context";
 import { Title } from "./Title";
 import { days } from "./data";

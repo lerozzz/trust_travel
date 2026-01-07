@@ -2,8 +2,8 @@
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { observer } from "mobx-react-lite";
-import { useToursPageStore } from "../../(model)/context";
-import { TourPageStore } from "../../(model)/store";
+import { useToursPageFilterStore } from "../../(model)/context";
+import { FilterController } from "../../(model)/FilterController";
 import styles from "./index.module.scss";
 import { Title } from "./Title";
 
@@ -12,7 +12,7 @@ function valuetext(value: number) {
 }
 
 export const Price = observer(() => {
-  const { onChangePrice } = useToursPageStore();
+  const { onChangePrice } = useToursPageFilterStore();
 
   return (
     <div className={styles.form}>
@@ -21,7 +21,7 @@ export const Price = observer(() => {
       <Box sx={{ width: 300 }}>
         <Slider
           getAriaLabel={() => "Price range"}
-          defaultValue={TourPageStore.INIT_PRICE_RANGE}
+          defaultValue={FilterController.INIT_PRICE_RANGE}
           onChangeCommitted={(e, newValue) => {
             if (Array.isArray(newValue)) {
               onChangePrice(e, newValue);

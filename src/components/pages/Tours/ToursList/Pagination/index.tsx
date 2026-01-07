@@ -1,13 +1,55 @@
 "use client";
 
+import { Button, ButtonType } from "@/components/common/Button";
+import {
+  Color,
+  Typography,
+  TypographyType,
+} from "@/components/common/Typography";
+import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import { FC } from "react";
 import { useToursPageStore } from "../../(model)/context";
+import styles from "./index.module.scss";
 
 export const Pagination: FC = observer(() => {
-  const {} = useToursPageStore();
+  const {
+    currentPage,
+    isLastPage,
+    isFirstPage,
+    handleNextPage,
+    handlePrevPage,
+    tourList,
+  } = useToursPageStore();
 
-  return null;
+  console.log(toJS(tourList));
+  return (
+    <div className={styles.main_wrapper}>
+      <Button
+        as="button"
+        onClick={handlePrevPage}
+        disabled={isFirstPage}
+        type={ButtonType.OTLINE_BUTTON_PAGINATION}
+      >
+        {"<"}
+      </Button>
+
+      <Button as="button" type={ButtonType.OTLINE_BUTTON_PAGINATION}>
+        <Typography color={Color.PRIMARY} type={TypographyType.OVERTITLE}>
+          {currentPage}
+        </Typography>
+      </Button>
+
+      <Button
+        as="button"
+        onClick={handleNextPage}
+        disabled={isLastPage}
+        type={ButtonType.OTLINE_BUTTON_PAGINATION}
+      >
+        {">"}
+      </Button>
+    </div>
+  );
 
   // return (
   //   <div className={styles.main_wrapper}>

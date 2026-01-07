@@ -8,15 +8,12 @@ const Links = () => {
     <nav>
       <ul className={styles.list}>
         {links.map(({ title, href }, index) => (
-          <Typography
-                          type={TypographyType.FOOTER}
-                          as="span"
-                          color="#fcfdff"
-                          >
-          <Link key={index} href={href}>
-            <li className={styles.item}>{title}</li>
+          <Typography type={TypographyType.FOOTER} as="span" color="#fcfdff">
+          >
+            <Link key={index} href={href}>
+              <li className={styles.item}>{title}</li>
             </Link>
-            </Typography>
+          </Typography>
         ))}
       </ul>
     </nav>

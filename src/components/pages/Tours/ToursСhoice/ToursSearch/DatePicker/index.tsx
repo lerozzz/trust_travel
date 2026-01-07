@@ -4,7 +4,8 @@ import { observer } from "mobx-react-lite";
 import Image from "next/image";
 import { FC } from "react";
 import DatePicker, { DateObject } from "react-multi-date-picker";
-import { useToursPageFilterStore } from "../../../(model)/context";
+
+import { useToursPageFilterStore } from "@/components/pages/Tours/(model)/context";
 import styles from "./index.module.scss";
 
 export const MuiDatePicker: FC = observer(() => {
