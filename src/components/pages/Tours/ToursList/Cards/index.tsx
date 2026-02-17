@@ -14,7 +14,7 @@ interface CardsProps {
 }
 
 export const Cards: FC<CardsProps> = ({ allTours, isEmptyTours }) => {
-  if (!isEmptyTours) {
+  if (isEmptyTours) {
     return (
       <div
         style={{

@@ -14,11 +14,11 @@ import { LocationSelect } from "./LocationSelect";
 import { NightsInput } from "./NightsInput";
 
 export const ToursSearch = () => {
-  const { fetchToursSearch } = useToursPageFilterStore();
+  const { onSubmit } = useToursPageFilterStore();
 
   const handleSearch = async (e: FormEvent<HTMLFormElement>) => {
-    fetchToursSearch();
     e.preventDefault();
+    onSubmit();
   };
 
   return (

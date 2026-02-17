@@ -20,6 +20,21 @@ export class RequesterInstance {
     const response = await this.instance.get(url, config);
     return response.data;
   };
+
+  post = async <B, R>(
+    url: string,
+    config?: {
+      body?: B;
+      other?: AxiosRequestConfig<unknown>;
+    },
+  ): Promise<R> => {
+    const response = await this.instance.post<R>(
+      url,
+      config?.body,
+      config?.other,
+    );
+    return response.data;
+  };
 }
 //Это универсальный GET-запрос.
 //Он принимает: url — строку /tours/list и config — объект, содержащий параметры

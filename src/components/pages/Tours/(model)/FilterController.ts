@@ -9,8 +9,8 @@ export class FilterController {
   adultsCount: number = 0;
   childsCount: number = 0;
   location: Country | null = null;
-  dateFrom: number | null = null;
-  dateTo: number | null = null;
+  dateFrom: string | null = null;
+  dateTo: string | null = null;
   startNight: number | null = null;
   endNight: number | null = null;
 
@@ -20,8 +20,11 @@ export class FilterController {
   selectedNights: number[] = [];
   priceRange: [number, number] = FilterController.INIT_PRICE_RANGE;
 
-  constructor() {
+  private readonly _onSearch: () => void;
+
+  constructor(onSearch: () => void) {
     makeAutoObservable(this);
+    this._onSearch = onSearch;
   }
 
   private _handleGuests = (type: GuestType, operation: "inc" | "dec") => {
@@ -74,13 +77,13 @@ export class FilterController {
   };
 
   onChangeDepatureCities = (cityName: string) => {
-    // console.log(this.selectedDepartureCities);
     const index = this.selectedDepartureCities.indexOf(cityName);
     if (index === -1) {
       this.selectedDepartureCities.push(cityName);
     } else {
       this.selectedDepartureCities.splice(index, 1);
     }
+    this._onSearch();
     console.log("Выбранные города:", toJS(this.selectedDepartureCities));
   };
 
@@ -112,8 +115,8 @@ export class FilterController {
   onChangeDate = (value: DateObject[] | null) => {
     const [dateFrom, dateTo] = value || [];
 
-    const dateFromFormatted = dateFrom ? dateFrom.unix : null;
-    const dateToFormatted = dateTo ? dateTo.unix : null;
+    const dateFromFormatted = dateFrom ? dateFrom.format("YYYY-MM-DD") : null;
+    const dateToFormatted = dateTo ? dateTo.format("YYYY-MM-DD") : null;
 
     this.dateFrom = dateFromFormatted;
     this.dateTo = dateToFormatted;
@@ -128,6 +131,23 @@ export class FilterController {
     this.startNight = nightFromFormatted;
     this.endNight = nightToFormatted;
   };
+
+  onSubmit = () => {
+    this._onSearch();
+  };
+
+  get SeacrhParams() {
+    return {
+      location: this.location?.countryCode,
+      dateFrom: this.dateFrom,
+      dateTo: this.dateTo,
+      startNight: this.startNight,
+      endNight: this.endNight,
+      adultsCount: this.adultsCount,
+      childsCount: this.childsCount,
+      departureCities: this.selectedDepartureCities,
+    };
+  }
 
   fetchToursSearch = () => {
     console.log(
@@ -156,26 +176,30 @@ export class FilterController {
     this._guestsDecrease(GuestType.CHILD);
   };
 
-  updateTours = async () => {
-    // const searchParams = new URLSearchParams(
-    //   JSON.stringify({
-    //     rating: this._rating,
-    //     dateStart: this.dateStart,
-    //     dateEnd: this.dateEnd,
-    //   }),
-    // ).toString();
-    // try {
-    //   const responseToursList = await fetch(`/api/tours/list?${searchParams}`, {
-    //     method: "GET",
-    //   });
-    //   if (!responseToursList.ok) {
-    //     throw Error();
-    //   }
-    //   const newToursList = await responseToursList.json();
-    //   console.log(newToursList);
-    //   this.toursList = newToursList;
-    // } catch (error) {
-    //   console.error(error);
-    // }
-  };
+  //updateTours = async () => {
+  // const searchParams = new URLSearchParams(
+  //   JSON.stringify({
+  //     rating: this._rating,
+  //     dateStart: this.dateStart,
+  //     dateEnd: this.dateEnd,
+  //   }),
+  // ).toString();
+  // try {
+  //   const responseToursList = await fetch(`/api/tours/list?${searchParams}`, {
+  //     method: "GET",
+  //   });
+  //   if (!responseToursList.ok) {
+  //     throw Error();
+  //   }
+  //   const newToursList = await responseToursList.json();
+  //   console.log(newToursList);
+  //   this.toursList = newToursList;
+  // } catch (error) {
+  //   console.error(error);
+  // }
+  // };
+  //}
+
+  // type FilterControllerParams = {
+  //   updateTourList: (list: Tour[]) => void;
 }

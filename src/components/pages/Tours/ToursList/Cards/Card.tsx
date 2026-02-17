@@ -9,8 +9,8 @@ import { default as person_count } from "@public/main/person_count.svg";
 import cn from "classnames";
 import Image from "next/image";
 import { FC } from "react";
-import { Tour } from "../../(model)/type";
 import styles from "./Card.module.scss";
+import { Tour } from "@/app/api/tours/list/data";
 
 const Card: FC<Tour> = ({
   country,

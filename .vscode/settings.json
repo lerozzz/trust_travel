@@ -1,18 +1,12 @@
 {
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "eslint.codeActionsOnSave.mode": "all",
-  "eslint.alwaysShowStatus": true,
-  "prettier.requireConfig": true,
-  "editor.rulers": [140],
-  "files.associations": {
-    "*.mdx": "mdx"
+  "editor.formatOnSave": false,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
   },
 
-  "javascript.preferences.importModuleSpecifier": "relative",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "explicit"
-  }
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.useFlatConfig": true
+
 }
